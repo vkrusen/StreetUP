@@ -59,11 +59,13 @@ class ViewController: UIViewController {
         
         self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
         append()
-        append()
     }
     
     func append() {
-        self.posts.append(Post(name: "username", image: #imageLiteral(resourceName: "image"), price: 5999, currency: "kr", title: "Supreme Bogo Pink", postID: "id", media_url: "media_url"))
+        self.posts.append(Post(name: "username", image: #imageLiteral(resourceName: "image"), price: 5499, currency: "kr", title: "Supreme Bogo Pink", postID: "id", media_url: "media_url"))
+        self.posts.append(Post(name: "username", image: #imageLiteral(resourceName: "image2"), price: 899, currency: "kr", title: "Bape Tee", postID: "id", media_url: "media_url"))
+        self.posts.append(Post(name: "username", image: #imageLiteral(resourceName: "image3"), price: 4500, currency: "kr", title: "Supreme x Stone Island", postID: "id", media_url: "media_url"))
+        self.posts.append(Post(name: "username", image: #imageLiteral(resourceName: "image4"), price: 5800, currency: "kr", title: "NMD Human Race OG", postID: "id", media_url: "media_url"))
         kolodaView.resetCurrentCardIndex()
     }
     
