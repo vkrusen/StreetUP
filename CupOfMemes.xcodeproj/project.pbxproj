@@ -11,17 +11,31 @@
 		A8047CAD1E916AE900DEE309 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8047CAC1E916AE900DEE309 /* ViewController.swift */; };
 		A8047CB01E916AE900DEE309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8047CAE1E916AE900DEE309 /* Main.storyboard */; };
 		A8047CB21E916AE900DEE309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8047CB11E916AE900DEE309 /* Assets.xcassets */; };
-		A8047CB51E916AE900DEE309 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8047CB31E916AE900DEE309 /* LaunchScreen.storyboard */; };
+		A8EFCB4820EFDB5C009A5D81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8EFCB4720EFDB5C009A5D81 /* LaunchScreen.storyboard */; };
+		A8EFCB4D20EFE53D009A5D81 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EFCB4C20EFE53D009A5D81 /* CardView.swift */; };
+		A8EFCB4F20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EFCB4E20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift */; };
+		A8EFCB5120EFE977009A5D81 /* CustomKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EFCB5020EFE977009A5D81 /* CustomKolodaView.swift */; };
+		A8EFCB5520EFEF6B009A5D81 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8EFCB5420EFEF6B009A5D81 /* CardView.xib */; };
+		A8EFCB5920F01927009A5D81 /* Gaegu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8EFCB5820F01927009A5D81 /* Gaegu-Regular.ttf */; };
+		FAF30A6CFE702AED953AA387 /* Pods_CupOfMemes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3166D931E30D2AE9731E1E07 /* Pods_CupOfMemes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3166D931E30D2AE9731E1E07 /* Pods_CupOfMemes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CupOfMemes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8047CA71E916AE900DEE309 /* CupOfMemes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupOfMemes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8047CAA1E916AE900DEE309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8047CAC1E916AE900DEE309 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A8047CAF1E916AE900DEE309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8047CB11E916AE900DEE309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A8047CB41E916AE900DEE309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8047CB61E916AE900DEE309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8EFCB4720EFDB5C009A5D81 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A8EFCB4C20EFE53D009A5D81 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		A8EFCB4E20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundKolodaAnimator.swift; sourceTree = "<group>"; };
+		A8EFCB5020EFE977009A5D81 /* CustomKolodaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKolodaView.swift; sourceTree = "<group>"; };
+		A8EFCB5420EFEF6B009A5D81 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		A8EFCB5820F01927009A5D81 /* Gaegu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gaegu-Regular.ttf"; sourceTree = "<group>"; };
+		AB3162E1EBA9EA073B2E4916 /* Pods-CupOfMemes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CupOfMemes.release.xcconfig"; path = "Pods/Target Support Files/Pods-CupOfMemes/Pods-CupOfMemes.release.xcconfig"; sourceTree = "<group>"; };
+		F05C4C41E7684567274DDF50 /* Pods-CupOfMemes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CupOfMemes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CupOfMemes/Pods-CupOfMemes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF30A6CFE702AED953AA387 /* Pods_CupOfMemes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A32EBF1E879C8C68ECFD81B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3166D931E30D2AE9731E1E07 /* Pods_CupOfMemes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A8047C9E1E916AE900DEE309 = {
 			isa = PBXGroup;
 			children = (
 				A8047CA91E916AE900DEE309 /* CupOfMemes */,
 				A8047CA81E916AE900DEE309 /* Products */,
+				F5569262D3553E5ABE600BDB /* Pods */,
+				1A32EBF1E879C8C68ECFD81B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +79,28 @@
 		A8047CA91E916AE900DEE309 /* CupOfMemes */ = {
 			isa = PBXGroup;
 			children = (
+				A8EFCB5820F01927009A5D81 /* Gaegu-Regular.ttf */,
 				A8047CAA1E916AE900DEE309 /* AppDelegate.swift */,
 				A8047CAC1E916AE900DEE309 /* ViewController.swift */,
+				A8EFCB4E20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift */,
 				A8047CAE1E916AE900DEE309 /* Main.storyboard */,
+				A8EFCB5020EFE977009A5D81 /* CustomKolodaView.swift */,
 				A8047CB11E916AE900DEE309 /* Assets.xcassets */,
-				A8047CB31E916AE900DEE309 /* LaunchScreen.storyboard */,
+				A8EFCB5420EFEF6B009A5D81 /* CardView.xib */,
+				A8EFCB4C20EFE53D009A5D81 /* CardView.swift */,
+				A8EFCB4720EFDB5C009A5D81 /* LaunchScreen.storyboard */,
 				A8047CB61E916AE900DEE309 /* Info.plist */,
 			);
 			path = CupOfMemes;
+			sourceTree = "<group>";
+		};
+		F5569262D3553E5ABE600BDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F05C4C41E7684567274DDF50 /* Pods-CupOfMemes.debug.xcconfig */,
+				AB3162E1EBA9EA073B2E4916 /* Pods-CupOfMemes.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8047CB91E916AEA00DEE309 /* Build configuration list for PBXNativeTarget "CupOfMemes" */;
 			buildPhases = (
+				0F0C7838473088E15A80D3DC /* [CP] Check Pods Manifest.lock */,
 				A8047CA31E916AE900DEE309 /* Sources */,
 				A8047CA41E916AE900DEE309 /* Frameworks */,
 				A8047CA51E916AE900DEE309 /* Resources */,
+				B1FA283F01C25ED21CADE481 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,20 +165,66 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8047CB51E916AE900DEE309 /* LaunchScreen.storyboard in Resources */,
+				A8EFCB5920F01927009A5D81 /* Gaegu-Regular.ttf in Resources */,
+				A8EFCB4820EFDB5C009A5D81 /* LaunchScreen.storyboard in Resources */,
 				A8047CB21E916AE900DEE309 /* Assets.xcassets in Resources */,
 				A8047CB01E916AE900DEE309 /* Main.storyboard in Resources */,
+				A8EFCB5520EFEF6B009A5D81 /* CardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F0C7838473088E15A80D3DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CupOfMemes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1FA283F01C25ED21CADE481 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CupOfMemes/Pods-CupOfMemes-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CupOfMemes/Pods-CupOfMemes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A8047CA31E916AE900DEE309 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8EFCB5120EFE977009A5D81 /* CustomKolodaView.swift in Sources */,
 				A8047CAD1E916AE900DEE309 /* ViewController.swift in Sources */,
+				A8EFCB4D20EFE53D009A5D81 /* CardView.swift in Sources */,
+				A8EFCB4F20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift in Sources */,
 				A8047CAB1E916AE900DEE309 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,14 +238,6 @@
 				A8047CAF1E916AE900DEE309 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A8047CB31E916AE900DEE309 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A8047CB41E916AE900DEE309 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -257,6 +336,7 @@
 		};
 		A8047CBA1E916AEA00DEE309 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F05C4C41E7684567274DDF50 /* Pods-CupOfMemes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EPU3EJA4R8;
@@ -270,6 +350,7 @@
 		};
 		A8047CBB1E916AEA00DEE309 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB3162E1EBA9EA073B2E4916 /* Pods-CupOfMemes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EPU3EJA4R8;
@@ -300,6 +381,7 @@
 				A8047CBB1E916AEA00DEE309 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
