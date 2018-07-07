@@ -23,7 +23,7 @@
 
 /* Begin PBXFileReference section */
 		3166D931E30D2AE9731E1E07 /* Pods_CupOfMemes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CupOfMemes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8047CA71E916AE900DEE309 /* CupOfMemes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupOfMemes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8047CA71E916AE900DEE309 /* StreetUP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreetUP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8047CAA1E916AE900DEE309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8047CAC1E916AE900DEE309 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A8047CAF1E916AE900DEE309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		A8047C9E1E916AE900DEE309 = {
 			isa = PBXGroup;
 			children = (
-				A8047CA91E916AE900DEE309 /* CupOfMemes */,
+				A8047CA91E916AE900DEE309 /* StreetUP */,
 				A8047CA81E916AE900DEE309 /* Products */,
 				F5569262D3553E5ABE600BDB /* Pods */,
 				1A32EBF1E879C8C68ECFD81B /* Frameworks */,
@@ -73,12 +73,12 @@
 		A8047CA81E916AE900DEE309 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A8047CA71E916AE900DEE309 /* CupOfMemes.app */,
+				A8047CA71E916AE900DEE309 /* StreetUP.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A8047CA91E916AE900DEE309 /* CupOfMemes */ = {
+		A8047CA91E916AE900DEE309 /* StreetUP */ = {
 			isa = PBXGroup;
 			children = (
 				A8EFCB5820F01927009A5D81 /* Gaegu-Regular.ttf */,
@@ -94,7 +94,7 @@
 				A8EFCB4720EFDB5C009A5D81 /* LaunchScreen.storyboard */,
 				A8047CB61E916AE900DEE309 /* Info.plist */,
 			);
-			path = CupOfMemes;
+			path = StreetUP;
 			sourceTree = "<group>";
 		};
 		F5569262D3553E5ABE600BDB /* Pods */ = {
@@ -109,9 +109,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A8047CA61E916AE900DEE309 /* CupOfMemes */ = {
+		A8047CA61E916AE900DEE309 /* StreetUP */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A8047CB91E916AEA00DEE309 /* Build configuration list for PBXNativeTarget "CupOfMemes" */;
+			buildConfigurationList = A8047CB91E916AEA00DEE309 /* Build configuration list for PBXNativeTarget "StreetUP" */;
 			buildPhases = (
 				0F0C7838473088E15A80D3DC /* [CP] Check Pods Manifest.lock */,
 				A8047CA31E916AE900DEE309 /* Sources */,
@@ -123,9 +123,9 @@
 			);
 			dependencies = (
 			);
-			name = CupOfMemes;
+			name = StreetUP;
 			productName = CupOfMemes;
-			productReference = A8047CA71E916AE900DEE309 /* CupOfMemes.app */;
+			productReference = A8047CA71E916AE900DEE309 /* StreetUP.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -145,7 +145,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A8047CA21E916AE900DEE309 /* Build configuration list for PBXProject "CupOfMemes" */;
+			buildConfigurationList = A8047CA21E916AE900DEE309 /* Build configuration list for PBXProject "StreetUP" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -158,7 +158,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A8047CA61E916AE900DEE309 /* CupOfMemes */,
+				A8047CA61E916AE900DEE309 /* StreetUP */,
 			);
 		};
 /* End PBXProject section */
@@ -369,7 +369,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A8047CA21E916AE900DEE309 /* Build configuration list for PBXProject "CupOfMemes" */ = {
+		A8047CA21E916AE900DEE309 /* Build configuration list for PBXProject "StreetUP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A8047CB71E916AEA00DEE309 /* Debug */,
@@ -378,7 +378,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A8047CB91E916AEA00DEE309 /* Build configuration list for PBXNativeTarget "CupOfMemes" */ = {
+		A8047CB91E916AEA00DEE309 /* Build configuration list for PBXNativeTarget "StreetUP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A8047CBA1E916AEA00DEE309 /* Debug */,
