@@ -41,12 +41,14 @@ private let frameAnimationSpringSpeed: CGFloat = 16
 private let kolodaCountOfVisibleCards = 2
 private let kolodaAlphaValueSemiTransparent: CGFloat = 0.1
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
     
     // Setup array
     var posts:[Post] = []
     
     @IBOutlet var kolodaView: CustomKolodaView!
+    @IBOutlet var bidButton: UIButton!
+    @IBOutlet var skipButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +60,20 @@ class ViewController: UIViewController {
         kolodaView.animator = BackgroundKolodaAnimator(koloda: kolodaView)
         
         self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
+        
+        setupGradient(item: bidButton, colors: [hexStringToUIColorWithAlpha(hex: "B4EC51", alpha: 1.0), hexStringToUIColorWithAlpha(hex: "35BA00", alpha: 1.0)], alpha: [1.0], locations: [0.0    ,1.0], roundedCorners: true)
+        setupShadow(UIItem: bidButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "3FBD06")
+        
+        setupGradient(item: skipButton, colors: [hexStringToUIColorWithAlpha(hex: "51CAEC", alpha: 1.0), hexStringToUIColorWithAlpha(hex: "0054BA", alpha: 1.0)], alpha: [1.0], locations: [0.0,1.0], roundedCorners: true)
+        setupShadow(UIItem: skipButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "0054BA")
+        
         append()
+    }
+    
+    @IBAction func bidAction(_ sender: Any) {
+    }
+    
+    @IBAction func skipAction(_ sender: Any) {
     }
     
     func append() {

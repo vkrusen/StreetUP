@@ -17,6 +17,7 @@
 		A8EFCB5120EFE977009A5D81 /* CustomKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EFCB5020EFE977009A5D81 /* CustomKolodaView.swift */; };
 		A8EFCB5520EFEF6B009A5D81 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8EFCB5420EFEF6B009A5D81 /* CardView.xib */; };
 		A8EFCB5920F01927009A5D81 /* Gaegu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8EFCB5820F01927009A5D81 /* Gaegu-Regular.ttf */; };
+		A8EFCB5B20F0D434009A5D81 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EFCB5A20F0D434009A5D81 /* BaseViewController.swift */; };
 		FAF30A6CFE702AED953AA387 /* Pods_CupOfMemes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3166D931E30D2AE9731E1E07 /* Pods_CupOfMemes.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		A8EFCB5020EFE977009A5D81 /* CustomKolodaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKolodaView.swift; sourceTree = "<group>"; };
 		A8EFCB5420EFEF6B009A5D81 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		A8EFCB5820F01927009A5D81 /* Gaegu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gaegu-Regular.ttf"; sourceTree = "<group>"; };
+		A8EFCB5A20F0D434009A5D81 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AB3162E1EBA9EA073B2E4916 /* Pods-CupOfMemes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CupOfMemes.release.xcconfig"; path = "Pods/Target Support Files/Pods-CupOfMemes/Pods-CupOfMemes.release.xcconfig"; sourceTree = "<group>"; };
 		F05C4C41E7684567274DDF50 /* Pods-CupOfMemes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CupOfMemes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CupOfMemes/Pods-CupOfMemes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +84,7 @@
 				A8EFCB5820F01927009A5D81 /* Gaegu-Regular.ttf */,
 				A8047CAA1E916AE900DEE309 /* AppDelegate.swift */,
 				A8047CAC1E916AE900DEE309 /* ViewController.swift */,
+				A8EFCB5A20F0D434009A5D81 /* BaseViewController.swift */,
 				A8EFCB4E20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift */,
 				A8047CAE1E916AE900DEE309 /* Main.storyboard */,
 				A8EFCB5020EFE977009A5D81 /* CustomKolodaView.swift */,
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8EFCB5120EFE977009A5D81 /* CustomKolodaView.swift in Sources */,
+				A8EFCB5B20F0D434009A5D81 /* BaseViewController.swift in Sources */,
 				A8047CAD1E916AE900DEE309 /* ViewController.swift in Sources */,
 				A8EFCB4D20EFE53D009A5D81 /* CardView.swift in Sources */,
 				A8EFCB4F20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift in Sources */,
