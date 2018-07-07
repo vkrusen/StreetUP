@@ -67,6 +67,7 @@ class ViewController: UIViewController {
         self.posts.append(Post(name: "username", image: #imageLiteral(resourceName: "image3"), price: 4500, currency: "kr", title: "Supreme x Stone Island", postID: "id", media_url: "media_url"))
         self.posts.append(Post(name: "username", image: #imageLiteral(resourceName: "image4"), price: 5800, currency: "kr", title: "NMD Human Race OG", postID: "id", media_url: "media_url"))
         kolodaView.resetCurrentCardIndex()
+        print(posts)
     }
     
     override func didReceiveMemoryWarning() {
@@ -117,7 +118,7 @@ extension ViewController: KolodaViewDataSource {
         let post = posts[index]
             
             let customCard = Bundle.main.loadNibNamed("CardView", owner: self, options: nil)?.first as! CardView
-                customCard.imageView = UIImageView(image: post.Image)
+                customCard.imageView.image = post.Image
                 customCard.titleLabel.text = post.Title
                 customCard.priceLabel.text = "\(post.Price)\(post.Currency)"
         
