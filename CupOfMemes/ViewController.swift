@@ -37,7 +37,7 @@ struct Post {
 }
 
 private let frameAnimationSpringBounciness: CGFloat = 9
-private let frameAnimationSpringSpeed: CGFloat = 16
+private let frameAnimationSpringSpeed: CGFloat = 10
 private let kolodaCountOfVisibleCards = 2
 private let kolodaAlphaValueSemiTransparent: CGFloat = 0.1
 
@@ -71,9 +71,11 @@ class ViewController: BaseViewController {
     }
     
     @IBAction func bidAction(_ sender: Any) {
+        kolodaView.swipe(.left)
     }
     
     @IBAction func skipAction(_ sender: Any) {
+        kolodaView.swipe(.right)
     }
     
     func append() {
