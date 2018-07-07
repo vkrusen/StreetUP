@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A8047CA61E916AE900DEE309"
-               BuildableName = "CupOfMemes.app"
-               BlueprintName = "CupOfMemes"
+               BuildableName = "StreetUP.app"
+               BlueprintName = "StreetUP"
                ReferencedContainer = "container:StreetUP.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,8 +34,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A8047CA61E916AE900DEE309"
-            BuildableName = "CupOfMemes.app"
-            BlueprintName = "CupOfMemes"
+            BuildableName = "StreetUP.app"
+            BlueprintName = "StreetUP"
             ReferencedContainer = "container:StreetUP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -58,8 +58,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A8047CA61E916AE900DEE309"
-            BuildableName = "CupOfMemes.app"
-            BlueprintName = "CupOfMemes"
+            BuildableName = "StreetUP.app"
+            BlueprintName = "StreetUP"
             ReferencedContainer = "container:StreetUP.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -77,8 +77,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A8047CA61E916AE900DEE309"
-            BuildableName = "CupOfMemes.app"
-            BlueprintName = "CupOfMemes"
+            BuildableName = "StreetUP.app"
+            BlueprintName = "StreetUP"
             ReferencedContainer = "container:StreetUP.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
