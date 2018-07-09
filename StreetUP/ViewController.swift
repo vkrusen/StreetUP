@@ -52,6 +52,7 @@ class ViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("View OPEN")
         
         kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
         kolodaView.countOfVisibleCards = kolodaCountOfVisibleCards
@@ -125,6 +126,10 @@ extension ViewController: KolodaViewDelegate {
 
 // MARK: KolodaViewDataSource
 extension ViewController: KolodaViewDataSource {
+    
+    func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
+        return DragSpeed.fast
+    }
     
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
         return posts.count
