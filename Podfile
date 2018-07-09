@@ -8,6 +8,6 @@ target 'StreetUP' do
   # Pods for CupOfMemes
   pod 'Koloda'
   pod 'Firebase/Core'
-
+  pod 'Firebase/Auth'
 
 end

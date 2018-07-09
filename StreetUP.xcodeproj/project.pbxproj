@@ -11,6 +11,8 @@
 		A8047CAD1E916AE900DEE309 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8047CAC1E916AE900DEE309 /* ViewController.swift */; };
 		A8047CB01E916AE900DEE309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8047CAE1E916AE900DEE309 /* Main.storyboard */; };
 		A8047CB21E916AE900DEE309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8047CB11E916AE900DEE309 /* Assets.xcassets */; };
+		A83CA9FD20F156FD0015469E /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83CA9FC20F156FD0015469E /* AuthViewController.swift */; };
+		A83CAA0020F3ED990015469E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83CA9FF20F3ED990015469E /* RegisterViewController.swift */; };
 		A8EFCB4820EFDB5C009A5D81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8EFCB4720EFDB5C009A5D81 /* LaunchScreen.storyboard */; };
 		A8EFCB4D20EFE53D009A5D81 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EFCB4C20EFE53D009A5D81 /* CardView.swift */; };
 		A8EFCB4F20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EFCB4E20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift */; };
@@ -31,6 +33,9 @@
 		A8047CAF1E916AE900DEE309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8047CB11E916AE900DEE309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8047CB61E916AE900DEE309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A83CA9FC20F156FD0015469E /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		A83CA9FE20F3E8E40015469E /* StreetUP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StreetUP.entitlements; sourceTree = "<group>"; };
+		A83CA9FF20F3ED990015469E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A8EFCB4720EFDB5C009A5D81 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8EFCB4C20EFE53D009A5D81 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A8EFCB4E20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundKolodaAnimator.swift; sourceTree = "<group>"; };
@@ -87,12 +92,15 @@
 		A8047CA91E916AE900DEE309 /* StreetUP */ = {
 			isa = PBXGroup;
 			children = (
+				A83CA9FE20F3E8E40015469E /* StreetUP.entitlements */,
 				A8EFCB5820F01927009A5D81 /* Gaegu-Regular.ttf */,
 				A8047CAA1E916AE900DEE309 /* AppDelegate.swift */,
 				A8047CAC1E916AE900DEE309 /* ViewController.swift */,
 				A8EFCB5A20F0D434009A5D81 /* BaseViewController.swift */,
 				A8EFCB4E20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift */,
 				A8047CAE1E916AE900DEE309 /* Main.storyboard */,
+				A83CA9FF20F3ED990015469E /* RegisterViewController.swift */,
+				A83CA9FC20F156FD0015469E /* AuthViewController.swift */,
 				A8EFCB5020EFE977009A5D81 /* CustomKolodaView.swift */,
 				A8047CB11E916AE900DEE309 /* Assets.xcassets */,
 				A8EFCB5420EFEF6B009A5D81 /* CardView.xib */,
@@ -152,6 +160,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = EPU3EJA4R8;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -253,6 +266,8 @@
 				A8EFCB5120EFE977009A5D81 /* CustomKolodaView.swift in Sources */,
 				A8EFCB5B20F0D434009A5D81 /* BaseViewController.swift in Sources */,
 				A8047CAD1E916AE900DEE309 /* ViewController.swift in Sources */,
+				A83CAA0020F3ED990015469E /* RegisterViewController.swift in Sources */,
+				A83CA9FD20F156FD0015469E /* AuthViewController.swift in Sources */,
 				A8EFCB4D20EFE53D009A5D81 /* CardView.swift in Sources */,
 				A8EFCB4F20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift in Sources */,
 				A8047CAB1E916AE900DEE309 /* AppDelegate.swift in Sources */,
@@ -369,6 +384,7 @@
 			baseConfigurationReference = B3805DC3EAEDD260CD9F3452 /* Pods-StreetUP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = StreetUP/StreetUP.entitlements;
 				DEVELOPMENT_TEAM = EPU3EJA4R8;
 				INFOPLIST_FILE = StreetUP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -383,6 +399,7 @@
 			baseConfigurationReference = 110B3ACA4799CB35695A0EDD /* Pods-StreetUP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = StreetUP/StreetUP.entitlements;
 				DEVELOPMENT_TEAM = EPU3EJA4R8;
 				INFOPLIST_FILE = StreetUP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

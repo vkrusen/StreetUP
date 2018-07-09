@@ -10,9 +10,27 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="8af-wj-s0Z">
+            <objects>
+                <viewController id="CmT-eT-0wa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Xe-dW-rI2"/>
+                        <viewControllerLayoutGuide type="bottom" id="a91-2a-FWc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6hO-f4-kIW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oQm-b6-mgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-692" y="139"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CupOfMemes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StreetUP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,7 +39,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pD3-t1-RoX" customClass="CustomKolodaView" customModule="CupOfMemes" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pD3-t1-RoX" customClass="CustomKolodaView" customModule="StreetUP" customModuleProvider="target">
                                 <rect key="frame" x="32" y="133" width="310" height="400"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="KpB-Gz-OQK"/>
@@ -77,6 +95,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="8mb-TE-jqL">
+            <objects>
+                <viewController id="ZZR-Lg-N9A" customClass="RegisterViewController" customModule="StreetUP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xPo-ek-HPY"/>
+                        <viewControllerLayoutGuide type="bottom" id="aeV-Is-MSX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="47T-hN-uW0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hgp-N1-TtA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="139"/>
         </scene>
     </scenes>
 </document>
