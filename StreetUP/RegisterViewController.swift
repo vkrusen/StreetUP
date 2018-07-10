@@ -26,7 +26,7 @@ class TextField: UITextField {
     }
 }
 
-class RegisterViewController: UIViewController, UITextFieldDelegate {
+class RegisterViewController: BaseViewController, UITextFieldDelegate {
     
 
     @IBOutlet var OneDigitTextField: UITextField!
@@ -41,6 +41,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Register OPEN")
+        roundedCorners()
         
         hideshowDigitTextfields(ishidden: false)
         
@@ -51,6 +52,16 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     // Factories
+    func roundedCorners() {
+        OneDigitTextField.layer.cornerRadius = 4
+        TwoDigitTextField.layer.cornerRadius = 4
+        ThreeDigitTextField.layer.cornerRadius = 4
+        FourDigitTextField.layer.cornerRadius = 4
+        FiveDigitTextField.layer.cornerRadius = 4
+        SixDigitTextField.layer.cornerRadius = 4
+        numberTextField.layer.cornerRadius = 20
+    }
+    
     func hideshowDigitTextfields(ishidden: Bool) {
         OneDigitTextField.isHidden = ishidden
         TwoDigitTextField.isHidden = ishidden
@@ -151,6 +162,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             
             return false
          } else if textField.text!.count < 1  && string.count > 0 {
+            dismissKeyboard()
             let nextTag = textField.tag + 1
             
             // get next responder
@@ -161,10 +173,16 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 nextResponder = textField.superview?.viewWithTag(1)
             }
             textField.text = string
-            nextResponder?.becomeFirstResponder()
+            
+            if (textField.text!.count > 0  && string.count > 0) && textField == textField.superview?.viewWithTag(6) {
+                dismissKeyboard()
+            } else {
+                nextResponder?.becomeFirstResponder()
+            }
             return false
          } else if textField.text!.count >= 1  && string.count == 0{
             // on deleting value from Textfield
+            dismissKeyboard()
             let previousTag = textField.tag - 1
             
             // get next responder
@@ -185,7 +203,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         if OneDigitTextField.text?.isEmpty == false || TwoDigitTextField.text?.isEmpty == false || ThreeDigitTextField.text?.isEmpty == false || FourDigitTextField.text?.isEmpty == false || FiveDigitTextField.text?.isEmpty == false || SixDigitTextField.text?.isEmpty == false {
             
             print("All digits filled, moving on to next step!")
-            dismissKeyboard()
+            
             UserDefaults.standard.set("\(OneDigitTextField.text!)\(TwoDigitTextField.text!)\(ThreeDigitTextField.text!)\(FourDigitTextField.text!)\(FiveDigitTextField.text!)\(SixDigitTextField.text!)", forKey: "digits")
             self.SignIn(completion: { (int) -> () in
                 print("Done! User signed in, should segue to main ViewController now...")
