@@ -86,6 +86,7 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
     func SendSMS(completion: @escaping (Int) -> ()) {
         let phoneNumber = UserDefaults.standard.string(forKey: "number")!
         print(phoneNumber)
+        SVProgressHUD.dismiss(withDelay: 5)
         PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationID, error) in
             if let error = error {
                 print(error.localizedDescription)
@@ -105,7 +106,7 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
         SVProgressHUD.show(withStatus: "Verifierar mobilnummer")
         self.SendSMS(completion: { (int) -> () in
             print("SMS sent! Moving on to the next step")
-            numberTextField.isHidden = false
+            self.numberTextField.isUserInteractionEnabled = false
             SVProgressHUD.showSuccess(withStatus: "Vänta på SMS med sin 6-siffriga kod")
             self.hideshowDigitTextfields(ishidden: false)
         })
