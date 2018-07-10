@@ -153,9 +153,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
          } else if textField.text!.count < 1  && string.count > 0 {
             let nextTag = textField.tag + 1
             
-            if textField == textField.superview?.viewWithTag(7) || textField.text!.count == 0 {
-            }
-            
             // get next responder
             var nextResponder = textField.superview?.viewWithTag(nextTag)
             
