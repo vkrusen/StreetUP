@@ -199,6 +199,27 @@
                                     <outlet property="delegate" destination="ZZR-Lg-N9A" id="vwm-rT-BzG"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZb-84-9uC">
+                                <rect key="frame" x="169" y="361" width="37" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="8KF-9I-8Do"/>
+                                    <constraint firstAttribute="height" constant="30" id="Pe0-pH-DLu"/>
+                                </constraints>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneAction:" destination="ZZR-Lg-N9A" eventType="touchUpInside" id="pDb-od-pe0"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uv1-X0-1ZV">
+                                <rect key="frame" x="139" y="627" width="97" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="3Og-a3-lgt"/>
+                                    <constraint firstAttribute="height" id="9t8-AM-Fxp"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -208,13 +229,17 @@
                             <constraint firstItem="lBW-30-lg9" firstAttribute="top" secondItem="xPo-ek-HPY" secondAttribute="bottom" constant="110" id="Ajg-SI-AQh"/>
                             <constraint firstItem="GOO-rb-m7L" firstAttribute="centerX" secondItem="47T-hN-uW0" secondAttribute="centerX" id="AzW-jV-bb0"/>
                             <constraint firstItem="4tO-CV-cPU" firstAttribute="bottom" secondItem="xT0-He-qkl" secondAttribute="bottom" id="KVb-rN-vId"/>
+                            <constraint firstItem="xZb-84-9uC" firstAttribute="top" secondItem="GOO-rb-m7L" secondAttribute="bottom" constant="8" id="M9o-ii-KaT"/>
                             <constraint firstItem="xT0-He-qkl" firstAttribute="leading" secondItem="4tO-CV-cPU" secondAttribute="trailing" constant="10" id="Rek-YZ-BUY"/>
                             <constraint firstItem="4tO-CV-cPU" firstAttribute="leading" secondItem="lBW-30-lg9" secondAttribute="trailing" constant="15" id="SRW-Pt-XAH"/>
+                            <constraint firstItem="aeV-Is-MSX" firstAttribute="top" secondItem="Uv1-X0-1ZV" secondAttribute="bottom" constant="40" id="VM5-Be-d2c"/>
                             <constraint firstItem="xT0-He-qkl" firstAttribute="baseline" secondItem="LUl-0V-55W" secondAttribute="baseline" id="VhB-mV-jzQ"/>
+                            <constraint firstItem="Uv1-X0-1ZV" firstAttribute="centerX" secondItem="47T-hN-uW0" secondAttribute="centerX" id="dUO-Bl-MTO"/>
                             <constraint firstItem="lBW-30-lg9" firstAttribute="leading" secondItem="47T-hN-uW0" secondAttribute="leadingMargin" constant="54" id="dmX-O6-QMf"/>
                             <constraint firstItem="LUl-0V-55W" firstAttribute="leading" secondItem="xT0-He-qkl" secondAttribute="trailing" constant="10" id="h1U-4g-qGR"/>
                             <constraint firstItem="xT0-He-qkl" firstAttribute="bottom" secondItem="LUl-0V-55W" secondAttribute="bottom" id="hbw-2E-OZS"/>
                             <constraint firstItem="NtT-t1-0Ny" firstAttribute="leading" secondItem="LUl-0V-55W" secondAttribute="trailing" constant="10" id="iia-aF-Uhg"/>
+                            <constraint firstItem="xZb-84-9uC" firstAttribute="centerX" secondItem="GOO-rb-m7L" secondAttribute="centerX" id="jDW-S2-LPR"/>
                             <constraint firstItem="GOO-rb-m7L" firstAttribute="centerY" secondItem="47T-hN-uW0" secondAttribute="centerY" id="jgJ-Xf-fNY"/>
                             <constraint firstItem="lBW-30-lg9" firstAttribute="bottom" secondItem="4tO-CV-cPU" secondAttribute="bottom" id="kxr-Uz-rO4"/>
                             <constraint firstItem="NtT-t1-0Ny" firstAttribute="bottom" secondItem="cb8-qW-Zjt" secondAttribute="bottom" id="mxt-mn-s14"/>
@@ -231,12 +256,13 @@
                         <outlet property="SixDigitTextField" destination="cb8-qW-Zjt" id="g1z-WU-GXB"/>
                         <outlet property="ThreeDigitTextField" destination="xT0-He-qkl" id="qsA-ZW-0YS"/>
                         <outlet property="TwoDigitTextField" destination="4tO-CV-cPU" id="QZm-20-byQ"/>
+                        <outlet property="doneButton" destination="xZb-84-9uC" id="Ep6-2B-3WB"/>
                         <outlet property="numberTextField" destination="GOO-rb-m7L" id="4bf-CC-Y1Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hgp-N1-TtA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="994" y="139"/>
+            <point key="canvasLocation" x="992.79999999999995" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

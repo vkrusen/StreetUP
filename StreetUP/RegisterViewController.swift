@@ -11,7 +11,7 @@ import Firebase
 
 class TextField: UITextField {
     
-    let padding = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 5);
+    let padding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 5);
     
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
         return UIEdgeInsetsInsetRect(bounds, padding)
@@ -36,15 +36,18 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var FiveDigitTextField: UITextField!
     @IBOutlet var SixDigitTextField: UITextField!
     @IBOutlet var numberTextField: TextField!
+    @IBOutlet var doneButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Register OPEN")
         
-        hideshowDigitTextfields(ishidden: true)
+        hideshowDigitTextfields(ishidden: false)
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        
+        SixDigitTextField.addTarget(self, action: #selector(lastDigitEntered), for: .editingDidEnd)
     }
     
     // Factories
@@ -78,6 +81,15 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     // ** SECOND STEP
+    @IBAction func doneAction(_ sender: Any) {
+        UserDefaults.standard.set(numberTextField.text!, forKey: "number")
+        dismissKeyboard()
+        self.SendSMS(completion: { (int) -> () in
+            print("SMS sent! Moving on to the next step")
+            self.hideshowDigitTextfields(ishidden: false)
+        })
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
          if (textField == numberTextField) {
@@ -89,17 +101,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             
             let hasLeadingOne = length > 0 && decimalString.character(at: 0) == (1 as unichar)
             
-            if (length >= 11) {
-                UserDefaults.standard.set(textField.text!, forKey: "number")
-                dismissKeyboard()
-                self.SendSMS(completion: { (int) -> () in
-                    print("SMS sent! Moving on to the next step")
-                    self.hideshowDigitTextfields(ishidden: false)
-                })
-            }
-         
-            if length == 0 || (length > 11 && !hasLeadingOne) || length > 12 {
-            let newLength = (textField.text! as NSString).length + (string as NSString).length - range.length as Int
+            if length == 0 || (length >= 12 && !hasLeadingOne) || length > 12 {
+                let newLength = (textField.text! as NSString).length + (string as NSString).length - range.length as Int
                     
                 return (newLength > 10) ? false : true
             }
@@ -114,7 +117,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
          
             if (length - index) > 2 {
                 let areaCode = decimalString.substring(with: NSMakeRange(index, 2))
-                formattedString.appendFormat("(+%@)", areaCode)
+                formattedString.appendFormat("(+%@) ", areaCode)
                 index += 2
             }
          
@@ -147,14 +150,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 textField.text = formattedString as String
             
             return false
-         } else if (textField.text!.count >= 1) || (textField == textField.superview?.viewWithTag(6)) {
-            print("All digits filled, moving on to next step!")
-            UserDefaults.standard.set("\(OneDigitTextField.text!)\(TwoDigitTextField.text!)\(ThreeDigitTextField.text!)\(FourDigitTextField.text!)\(FiveDigitTextField.text!)\(SixDigitTextField.text!)", forKey: "digits")
-            self.SignIn(completion: { (int) -> () in
-                print("Done! User signed in, should segue to main ViewController now...")
-            })
-         } else if textField.text!.count < 1  && string.count > 0{
+         } else if textField.text!.count < 1  && string.count > 0 {
             let nextTag = textField.tag + 1
+            
+            if textField == textField.superview?.viewWithTag(7) || textField.text!.count == 0 {
+            }
             
             // get next responder
             var nextResponder = textField.superview?.viewWithTag(nextTag)
@@ -182,6 +182,18 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         }
         return true
         
+    }
+    
+    func lastDigitEntered() {
+        if OneDigitTextField.text?.isEmpty == false || TwoDigitTextField.text?.isEmpty == false || ThreeDigitTextField.text?.isEmpty == false || FourDigitTextField.text?.isEmpty == false || FiveDigitTextField.text?.isEmpty == false || SixDigitTextField.text?.isEmpty == false {
+            
+            print("All digits filled, moving on to next step!")
+            dismissKeyboard()
+            UserDefaults.standard.set("\(OneDigitTextField.text!)\(TwoDigitTextField.text!)\(ThreeDigitTextField.text!)\(FourDigitTextField.text!)\(FiveDigitTextField.text!)\(SixDigitTextField.text!)", forKey: "digits")
+            self.SignIn(completion: { (int) -> () in
+                print("Done! User signed in, should segue to main ViewController now...")
+            })
+        }
     }
     
     // ** THIRD STEP
