@@ -9,6 +9,7 @@
 import UIKit
 import Koloda
 import pop
+import Firebase
 
 struct Post {
     
