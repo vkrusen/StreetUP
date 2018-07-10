@@ -135,10 +135,14 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
                 formattedString.append("1 ")
                 index += 1
             }
-         
+            
             if (length - index) > 2 {
                 let areaCode = decimalString.substring(with: NSMakeRange(index, 2))
-                formattedString.appendFormat("(+%@) ", areaCode)
+                if decimalString.substring(from: 0).hasPrefix("07") == true {
+                    formattedString.appendFormat("(+46) 7", areaCode)
+                } else {
+                    formattedString.appendFormat("(+%@) ", areaCode)
+                }
                 index += 2
             }
          
