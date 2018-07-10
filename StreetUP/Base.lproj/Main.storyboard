@@ -108,7 +108,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="+46 XX XXX XX XX" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="GOO-rb-m7L" customClass="TextField" customModule="StreetUP" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="(+46) XX-XXX XX XX" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="GOO-rb-m7L" customClass="TextField" customModule="StreetUP" customModuleProvider="target">
                                 <rect key="frame" x="87" y="313" width="200" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.58039215690000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>

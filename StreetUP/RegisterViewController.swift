@@ -102,7 +102,6 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
          if (textField == numberTextField) {
             let newString = (textField.text! as NSString).replacingCharacters(in: range, with: string)
             let components = newString.components(separatedBy: NSCharacterSet.decimalDigits.inverted)
@@ -161,8 +160,7 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
                 textField.text = formattedString as String
             
             return false
-         } else if textField.text!.count < 1  && string.count > 0 {
-            dismissKeyboard()
+        } else if textField.text!.count < 1  && string.count > 0 {
             let nextTag = textField.tag + 1
             
             // get next responder
@@ -175,10 +173,12 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
             textField.text = string
             
             if (textField.text!.count > 0  && string.count > 0) && textField == textField.superview?.viewWithTag(6) {
+                UserDefaults.standard.set(string, forKey: "lastDigit")
                 dismissKeyboard()
             } else {
                 nextResponder?.becomeFirstResponder()
             }
+            
             return false
          } else if textField.text!.count >= 1  && string.count == 0{
             // on deleting value from Textfield
@@ -200,6 +200,7 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
     }
     
     func lastDigitEntered() {
+        dismissKeyboard()
         if OneDigitTextField.text?.isEmpty == false || TwoDigitTextField.text?.isEmpty == false || ThreeDigitTextField.text?.isEmpty == false || FourDigitTextField.text?.isEmpty == false || FiveDigitTextField.text?.isEmpty == false || SixDigitTextField.text?.isEmpty == false {
             
             print("All digits filled, moving on to next step!")
