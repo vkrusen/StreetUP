@@ -31,11 +31,13 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - pop (1.0.10)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Koloda
+  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -49,6 +51,7 @@ SPEC REPOS:
     - Koloda
     - nanopb
     - pop
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
@@ -61,7 +64,8 @@ SPEC CHECKSUMS:
   Koloda: 0d39b2aa188ccd1fac48d752acaf9802e683c625
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 7f7bb1104d10ab1003e9f897a4b5919cceeac7bc
+PODFILE CHECKSUM: 9489a3c848655f8b58ed09ab00ec06319b7a0d81
 
 COCOAPODS: 1.5.2

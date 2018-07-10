@@ -9,5 +9,6 @@ target 'StreetUP' do
   pod 'Koloda'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'SVProgressHUD'
 
 end

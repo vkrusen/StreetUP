@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class TextField: UITextField {
     
@@ -37,6 +38,7 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet var SixDigitTextField: UITextField!
     @IBOutlet var numberTextField: TextField!
     @IBOutlet var doneButton: UIButton!
+    @IBOutlet var digitLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +46,9 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
         roundedCorners()
         
         hideshowDigitTextfields(ishidden: true)
+        setupGradient(item: numberTextField, colors: [hexStringToUIColorWithAlpha(hex: "87D300", alpha: 1.0), hexStringToUIColorWithAlpha(hex: "35BA00", alpha: 1.0)], alpha: [1.0], locations: [0.0    ,1.0], roundedCorners: true)
+        setupShadow(UIItem: numberTextField, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "3FBD06")
+        numberTextField.attributedPlaceholder = NSAttributedString(string: "(+46) xx-xxx xx xx", attributes:[NSForegroundColorAttributeName: hexStringToUIColor(hex: "FFFFFF")])
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -69,6 +74,7 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
         FourDigitTextField.isHidden = ishidden
         FiveDigitTextField.isHidden = ishidden
         SixDigitTextField.isHidden = ishidden
+        digitLabel.isHidden = ishidden
     }
     
     // Keyboard delegate
@@ -83,6 +89,7 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
         PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationID, error) in
             if let error = error {
                 print(error.localizedDescription)
+                SVProgressHUD.showError(withStatus: error.localizedDescription)
                 return
             }
             // Sign in using the verificationID and the code sent to the user
@@ -95,8 +102,11 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
     @IBAction func doneAction(_ sender: Any) {
         UserDefaults.standard.set(numberTextField.text!, forKey: "number")
         dismissKeyboard()
+        SVProgressHUD.show(withStatus: "Verifierar mobilnummer")
         self.SendSMS(completion: { (int) -> () in
             print("SMS sent! Moving on to the next step")
+            numberTextField.isHidden = false
+            SVProgressHUD.showSuccess(withStatus: "Vänta på SMS med sin 6-siffriga kod")
             self.hideshowDigitTextfields(ishidden: false)
         })
     }
@@ -203,6 +213,8 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
         dismissKeyboard()
         if OneDigitTextField.text?.isEmpty == false || TwoDigitTextField.text?.isEmpty == false || ThreeDigitTextField.text?.isEmpty == false || FourDigitTextField.text?.isEmpty == false || FiveDigitTextField.text?.isEmpty == false || SixDigitTextField.text?.isEmpty == false {
             
+            SVProgressHUD.show(withStatus: "Kontrollerar verifieringskoden")
+            
             print("All digits filled, moving on to next step!")
             
             UserDefaults.standard.set("\(OneDigitTextField.text!)\(TwoDigitTextField.text!)\(ThreeDigitTextField.text!)\(FourDigitTextField.text!)\(FiveDigitTextField.text!)\(SixDigitTextField.text!)", forKey: "digits")
@@ -231,9 +243,11 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
         Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
             if let error = error {
                 print(error)
+                SVProgressHUD.showError(withStatus: error.localizedDescription)
                 return
             }
             // User is signed in
+            SVProgressHUD.showSuccess(withStatus: "Klart!")
             completion(0)
         }
     }
