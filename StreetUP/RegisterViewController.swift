@@ -91,6 +91,8 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
             if let error = error {
                 print(error.localizedDescription)
                 SVProgressHUD.showError(withStatus: error.localizedDescription)
+                self.doneButton.isUserInteractionEnabled = true
+                self.numberTextField.isUserInteractionEnabled = true
                 return
             }
             // Sign in using the verificationID and the code sent to the user
@@ -104,9 +106,12 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
         UserDefaults.standard.set(numberTextField.text!, forKey: "number")
         dismissKeyboard()
         SVProgressHUD.show(withStatus: "Verifierar mobilnummer")
+        self.numberTextField.isUserInteractionEnabled = false
+        self.doneButton.isUserInteractionEnabled = false
         self.SendSMS(completion: { (int) -> () in
             print("SMS sent! Moving on to the next step")
             self.numberTextField.isUserInteractionEnabled = false
+            self.doneButton.isUserInteractionEnabled = false
             SVProgressHUD.showSuccess(withStatus: "Vänta på SMS med sin 6-siffriga kod")
             self.hideshowDigitTextfields(ishidden: false)
         })
