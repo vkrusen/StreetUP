@@ -43,7 +43,7 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
         print("Register OPEN")
         roundedCorners()
         
-        hideshowDigitTextfields(ishidden: false)
+        hideshowDigitTextfields(ishidden: true)
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -208,6 +208,9 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
             UserDefaults.standard.set("\(OneDigitTextField.text!)\(TwoDigitTextField.text!)\(ThreeDigitTextField.text!)\(FourDigitTextField.text!)\(FiveDigitTextField.text!)\(SixDigitTextField.text!)", forKey: "digits")
             self.SignIn(completion: { (int) -> () in
                 print("Done! User signed in, should segue to main ViewController now...")
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "ViewControllerId") as! ViewController
+                self.present(newViewController, animated: true, completion: nil)
             })
         }
     }

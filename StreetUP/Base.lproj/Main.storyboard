@@ -9,24 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Auth View Controller-->
-        <scene sceneID="8af-wj-s0Z">
-            <objects>
-                <viewController storyboardIdentifier="AuthViewControllerId" id="CmT-eT-0wa" customClass="AuthViewController" customModule="StreetUP" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8Xe-dW-rI2"/>
-                        <viewControllerLayoutGuide type="bottom" id="a91-2a-FWc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6hO-f4-kIW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oQm-b6-mgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-692" y="139"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
