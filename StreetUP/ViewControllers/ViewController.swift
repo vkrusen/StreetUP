@@ -64,11 +64,10 @@ class ViewController: BaseViewController {
         
         self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
         
-        setupGradient(item: bidButton, colors: [hexStringToUIColorWithAlpha(hex: "B4EC51", alpha: 1.0), hexStringToUIColorWithAlpha(hex: "35BA00", alpha: 1.0)], alpha: [1.0], locations: [0.0    ,1.0], roundedCorners: true)
         setupShadow(UIItem: bidButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "3FBD06")
-        
-        setupGradient(item: skipButton, colors: [hexStringToUIColorWithAlpha(hex: "51CAEC", alpha: 1.0), hexStringToUIColorWithAlpha(hex: "0054BA", alpha: 1.0)], alpha: [1.0], locations: [0.0,1.0], roundedCorners: true)
-        setupShadow(UIItem: skipButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "0054BA")
+        setupShadow(UIItem: skipButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "9F041B")
+        bidButton.layer.cornerRadius = (bidButton.bounds.height / 2)
+        skipButton.layer.cornerRadius = (skipButton.bounds.height / 2)
         
         append()
     }
@@ -82,10 +81,10 @@ class ViewController: BaseViewController {
     }
     
     func append() {
+        self.posts.append(Post(name: "username", image: #imageLiteral(resourceName: "image4"), price: 5800, currency: "kr", title: "NMD Human Race OG", postID: "id", media_url: "media_url"))
         self.posts.append(Post(name: "username", image: #imageLiteral(resourceName: "image"), price: 5499, currency: "kr", title: "Supreme Bogo Pink", postID: "id", media_url: "media_url"))
         self.posts.append(Post(name: "username", image: #imageLiteral(resourceName: "image2"), price: 899, currency: "kr", title: "Bape Tee", postID: "id", media_url: "media_url"))
         self.posts.append(Post(name: "username", image: #imageLiteral(resourceName: "image3"), price: 4500, currency: "kr", title: "Supreme x Stone Island", postID: "id", media_url: "media_url"))
-        self.posts.append(Post(name: "username", image: #imageLiteral(resourceName: "image4"), price: 5800, currency: "kr", title: "NMD Human Race OG", postID: "id", media_url: "media_url"))
         kolodaView.resetCurrentCardIndex()
         print(posts)
     }

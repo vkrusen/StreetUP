@@ -90,23 +90,55 @@
 		A8047CA91E916AE900DEE309 /* StreetUP */ = {
 			isa = PBXGroup;
 			children = (
-				A83CA9FE20F3E8E40015469E /* StreetUP.entitlements */,
-				A8EFCB5820F01927009A5D81 /* Gaegu-Regular.ttf */,
-				A8047CAA1E916AE900DEE309 /* AppDelegate.swift */,
-				A8047CAC1E916AE900DEE309 /* ViewController.swift */,
-				A8EFCB5A20F0D434009A5D81 /* BaseViewController.swift */,
-				A8EFCB4E20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift */,
+				A839731320F5562B00D3BC4F /* Fonts */,
+				A839731420F5563A00D3BC4F /* Supporting Files */,
+				A839731520F5565000D3BC4F /* ViewControllers */,
 				A8047CAE1E916AE900DEE309 /* Main.storyboard */,
-				A83CA9FF20F3ED990015469E /* RegisterViewController.swift */,
-				A8EFCB5020EFE977009A5D81 /* CustomKolodaView.swift */,
-				A8047CB11E916AE900DEE309 /* Assets.xcassets */,
-				A8EFCB5420EFEF6B009A5D81 /* CardView.xib */,
-				A8EFCB4C20EFE53D009A5D81 /* CardView.swift */,
-				A8EFCB4720EFDB5C009A5D81 /* LaunchScreen.storyboard */,
-				A8EFCB5E20F15175009A5D81 /* GoogleService-Info.plist */,
-				A8047CB61E916AE900DEE309 /* Info.plist */,
 			);
 			path = StreetUP;
+			sourceTree = "<group>";
+		};
+		A839731320F5562B00D3BC4F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A8EFCB5820F01927009A5D81 /* Gaegu-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A839731420F5563A00D3BC4F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8047CAA1E916AE900DEE309 /* AppDelegate.swift */,
+				A8EFCB5A20F0D434009A5D81 /* BaseViewController.swift */,
+				A839731620F5567700D3BC4F /* Card Supporting Files */,
+				A8EFCB4720EFDB5C009A5D81 /* LaunchScreen.storyboard */,
+				A8047CB61E916AE900DEE309 /* Info.plist */,
+				A8EFCB5E20F15175009A5D81 /* GoogleService-Info.plist */,
+				A8047CB11E916AE900DEE309 /* Assets.xcassets */,
+				A83CA9FE20F3E8E40015469E /* StreetUP.entitlements */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A839731520F5565000D3BC4F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A8047CAC1E916AE900DEE309 /* ViewController.swift */,
+				A83CA9FF20F3ED990015469E /* RegisterViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A839731620F5567700D3BC4F /* Card Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8EFCB4E20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift */,
+				A8EFCB5020EFE977009A5D81 /* CustomKolodaView.swift */,
+				A8EFCB5420EFEF6B009A5D81 /* CardView.xib */,
+				A8EFCB4C20EFE53D009A5D81 /* CardView.swift */,
+			);
+			path = "Card Supporting Files";
 			sourceTree = "<group>";
 		};
 		F5569262D3553E5ABE600BDB /* Pods */ = {
@@ -375,9 +407,9 @@
 			baseConfigurationReference = B3805DC3EAEDD260CD9F3452 /* Pods-StreetUP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = StreetUP/StreetUP.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "StreetUP/Supporting Files/StreetUP.entitlements";
 				DEVELOPMENT_TEAM = EPU3EJA4R8;
-				INFOPLIST_FILE = StreetUP/Info.plist;
+				INFOPLIST_FILE = "StreetUP/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Unikkod.StreetUP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -390,9 +422,9 @@
 			baseConfigurationReference = 110B3ACA4799CB35695A0EDD /* Pods-StreetUP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = StreetUP/StreetUP.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "StreetUP/Supporting Files/StreetUP.entitlements";
 				DEVELOPMENT_TEAM = EPU3EJA4R8;
-				INFOPLIST_FILE = StreetUP/Info.plist;
+				INFOPLIST_FILE = "StreetUP/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Unikkod.StreetUP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
