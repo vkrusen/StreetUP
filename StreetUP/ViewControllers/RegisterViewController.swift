@@ -54,9 +54,46 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
         view.addGestureRecognizer(tap)
         
         SixDigitTextField.addTarget(self, action: #selector(lastDigitEntered), for: .editingDidEnd)
+        
+        templogin()
     }
     
     // Factories
+    func templogin() {
+        let phoneNumber = "+1 0123456789"
+        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationID, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                SVProgressHUD.showError(withStatus: error.localizedDescription)
+                self.doneButton.isUserInteractionEnabled = true
+                self.numberTextField.isUserInteractionEnabled = true
+                return
+            }
+            // Sign in using the verificationID and the code sent to the user
+            let verificationCode = "123456"
+            
+            print(verificationCode)
+            print(phoneNumber)
+            print(verificationID!)
+            
+            let credential = PhoneAuthProvider.provider().credential(
+                withVerificationID: verificationID!,
+                verificationCode: verificationCode)
+            
+            print("CREDENTIAL \(credential)")
+            
+            Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+                if let error = error {
+                    print(error)
+                    SVProgressHUD.showError(withStatus: error.localizedDescription)
+                    return
+                }
+                // User is signed in
+                SVProgressHUD.showSuccess(withStatus: "Klart!")
+            }
+        }
+    }
+    
     func roundedCorners() {
         OneDigitTextField.layer.cornerRadius = 4
         TwoDigitTextField.layer.cornerRadius = 4

@@ -62,15 +62,15 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
     init(product: String, price: Int, settings: Settings) {
 
         let stripePublishableKey = self.stripePublishableKey
-        let backendBaseURL = self.backendBaseURL
+        let backendBaseURL = self.backendBaseURL!
 
         assert(stripePublishableKey.hasPrefix("pk_"), "You must set your Stripe publishable key at the top of CheckoutViewController.swift to run this app.")
-        assert(backendBaseURL != nil, "You must set your backend base url at the top of CheckoutViewController.swift to run this app.")
+        //assert(backendBaseURL != nil, "You must set your backend base url at the top of CheckoutViewController.swift to run this app.")
 
         self.product = product
         self.productImage.text = product
         self.theme = settings.theme
-        MyAPIClient.sharedClient.baseURLString = self.backendBaseURL
+        MyAPIClient.sharedClient.baseURLString = backendBaseURL
 
         // This code is included here for the sake of readability, but in your application you should set up your configuration and theme earlier, preferably in your App Delegate.
         let config = STPPaymentConfiguration.shared()
@@ -255,7 +255,7 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
     }
 
     // Note: this delegate method is optional. If you do not need to collect a
-    // shipping method from your user, you should not implement this method.
+    // shipping method from your user, you should not implement this method.    
     func paymentContext(_ paymentContext: STPPaymentContext, didUpdateShippingAddress address: STPAddress, completion: @escaping STPShippingMethodsCompletionBlock) {
         let upsGround = PKShippingMethod()
         upsGround.amount = 0

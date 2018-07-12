@@ -79,7 +79,7 @@ class BrowseProductsViewController: UITableViewController {
         cell.textLabel?.text = product
         cell.textLabel?.font = theme.font
         cell.textLabel?.textColor = theme.primaryForegroundColor
-        cell.detailTextLabel?.text = "$\(price/100).00"
+        cell.detailTextLabel?.text = "\(price/100).00kr"
         cell.accessoryType = .disclosureIndicator
         return cell
     }
