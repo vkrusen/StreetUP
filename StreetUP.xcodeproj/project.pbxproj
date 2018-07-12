@@ -11,6 +11,13 @@
 		A8047CAD1E916AE900DEE309 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8047CAC1E916AE900DEE309 /* ViewController.swift */; };
 		A8047CB01E916AE900DEE309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8047CAE1E916AE900DEE309 /* Main.storyboard */; };
 		A8047CB21E916AE900DEE309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8047CB11E916AE900DEE309 /* Assets.xcassets */; };
+		A839733520F7384100D3BC4F /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839732E20F7384000D3BC4F /* Buttons.swift */; };
+		A839733620F7384100D3BC4F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839732F20F7384000D3BC4F /* SettingsViewController.swift */; };
+		A839733720F7384100D3BC4F /* MyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839733020F7384000D3BC4F /* MyAPIClient.swift */; };
+		A839733820F7384100D3BC4F /* CheckoutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839733120F7384100D3BC4F /* CheckoutRowView.swift */; };
+		A839733920F7384100D3BC4F /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839733220F7384100D3BC4F /* CheckoutViewController.swift */; };
+		A839733A20F7384100D3BC4F /* BrowseProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839733320F7384100D3BC4F /* BrowseProductsViewController.swift */; };
+		A839733B20F7384100D3BC4F /* PaymentContextFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839733420F7384100D3BC4F /* PaymentContextFooterView.swift */; };
 		A83CAA0020F3ED990015469E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83CA9FF20F3ED990015469E /* RegisterViewController.swift */; };
 		A8EFCB4820EFDB5C009A5D81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8EFCB4720EFDB5C009A5D81 /* LaunchScreen.storyboard */; };
 		A8EFCB4D20EFE53D009A5D81 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EFCB4C20EFE53D009A5D81 /* CardView.swift */; };
@@ -32,6 +39,13 @@
 		A8047CAF1E916AE900DEE309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8047CB11E916AE900DEE309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8047CB61E916AE900DEE309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A839732E20F7384000D3BC4F /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		A839732F20F7384000D3BC4F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A839733020F7384000D3BC4F /* MyAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAPIClient.swift; sourceTree = "<group>"; };
+		A839733120F7384100D3BC4F /* CheckoutRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutRowView.swift; sourceTree = "<group>"; };
+		A839733220F7384100D3BC4F /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		A839733320F7384100D3BC4F /* BrowseProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseProductsViewController.swift; sourceTree = "<group>"; };
+		A839733420F7384100D3BC4F /* PaymentContextFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentContextFooterView.swift; sourceTree = "<group>"; };
 		A83CA9FE20F3E8E40015469E /* StreetUP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StreetUP.entitlements; sourceTree = "<group>"; };
 		A83CA9FF20F3ED990015469E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A8EFCB4720EFDB5C009A5D81 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,6 +104,7 @@
 		A8047CA91E916AE900DEE309 /* StreetUP */ = {
 			isa = PBXGroup;
 			children = (
+				A839731F20F737F200D3BC4F /* Stripe */,
 				A839731320F5562B00D3BC4F /* Fonts */,
 				A839731420F5563A00D3BC4F /* Supporting Files */,
 				A839731520F5565000D3BC4F /* ViewControllers */,
@@ -139,6 +154,21 @@
 				A8EFCB4C20EFE53D009A5D81 /* CardView.swift */,
 			);
 			path = "Card Supporting Files";
+			sourceTree = "<group>";
+		};
+		A839731F20F737F200D3BC4F /* Stripe */ = {
+			isa = PBXGroup;
+			children = (
+				A839733320F7384100D3BC4F /* BrowseProductsViewController.swift */,
+				A839732E20F7384000D3BC4F /* Buttons.swift */,
+				A839733120F7384100D3BC4F /* CheckoutRowView.swift */,
+				A839733220F7384100D3BC4F /* CheckoutViewController.swift */,
+				A839733020F7384000D3BC4F /* MyAPIClient.swift */,
+				A839733420F7384100D3BC4F /* PaymentContextFooterView.swift */,
+				A839732F20F7384000D3BC4F /* SettingsViewController.swift */,
+			);
+			name = Stripe;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		F5569262D3553E5ABE600BDB /* Pods */ = {
@@ -259,19 +289,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-StreetUP/Pods-StreetUP-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
@@ -287,13 +321,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A839733820F7384100D3BC4F /* CheckoutRowView.swift in Sources */,
 				A8EFCB5120EFE977009A5D81 /* CustomKolodaView.swift in Sources */,
 				A8EFCB5B20F0D434009A5D81 /* BaseViewController.swift in Sources */,
 				A8047CAD1E916AE900DEE309 /* ViewController.swift in Sources */,
+				A839733B20F7384100D3BC4F /* PaymentContextFooterView.swift in Sources */,
+				A839733920F7384100D3BC4F /* CheckoutViewController.swift in Sources */,
 				A83CAA0020F3ED990015469E /* RegisterViewController.swift in Sources */,
 				A8EFCB4D20EFE53D009A5D81 /* CardView.swift in Sources */,
 				A8EFCB4F20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift in Sources */,
+				A839733A20F7384100D3BC4F /* BrowseProductsViewController.swift in Sources */,
 				A8047CAB1E916AE900DEE309 /* AppDelegate.swift in Sources */,
+				A839733720F7384100D3BC4F /* MyAPIClient.swift in Sources */,
+				A839733520F7384100D3BC4F /* Buttons.swift in Sources */,
+				A839733620F7384100D3BC4F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +454,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Unikkod.StreetUP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -428,7 +469,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Unikkod.StreetUP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

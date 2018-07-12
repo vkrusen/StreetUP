@@ -48,7 +48,7 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
         hideshowDigitTextfields(ishidden: true)
         setupGradient(item: numberTextField, colors: [hexStringToUIColorWithAlpha(hex: "87D300", alpha: 1.0), hexStringToUIColorWithAlpha(hex: "35BA00", alpha: 1.0)], alpha: [1.0], locations: [0.0    ,1.0], roundedCorners: true)
         setupShadow(UIItem: numberTextField, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "3FBD06")
-        numberTextField.attributedPlaceholder = NSAttributedString(string: "(+46) xx-xxx xx xx", attributes:[NSForegroundColorAttributeName: hexStringToUIColor(hex: "FFFFFF")])
+        numberTextField.attributedPlaceholder = NSAttributedString(string: "(+46) xx-xxx xx xx", attributes:[NSAttributedStringKey.foregroundColor: hexStringToUIColor(hex: "FFFFFF")])
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -219,7 +219,7 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
         
     }
     
-    func lastDigitEntered() {
+    @objc func lastDigitEntered() {
         dismissKeyboard()
         if OneDigitTextField.text?.isEmpty == false || TwoDigitTextField.text?.isEmpty == false || ThreeDigitTextField.text?.isEmpty == false || FourDigitTextField.text?.isEmpty == false || FiveDigitTextField.text?.isEmpty == false || SixDigitTextField.text?.isEmpty == false {
             

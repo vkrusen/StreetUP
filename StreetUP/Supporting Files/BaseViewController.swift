@@ -85,7 +85,7 @@ struct Number {
     }()
 }
 
-extension Integer {
+extension BinaryInteger {
     var stringFormattedWithSeparator: String {
         return Number.formatterWithSeparator.string(for: self) ?? ""
     }
@@ -95,7 +95,7 @@ extension UILabel {
     func addTextSpacing() {
         if let textString = text {
             let attributedString = NSMutableAttributedString(string: textString)
-            attributedString.addAttribute(NSKernAttributeName, value: 0.45, range: NSRange(location: 0, length: attributedString.length - 1))
+            attributedString.addAttribute(NSAttributedStringKey.kern, value: 0.45, range: NSRange(location: 0, length: attributedString.length - 1))
             attributedText = attributedString
         }
     }
@@ -399,7 +399,7 @@ class BaseViewController: UIViewController {
         let style = NSMutableParagraphStyle()
         style.lineBreakMode = .byWordWrapping
         style.lineHeightMultiple = spacing
-        attrString.addAttribute(NSParagraphStyleAttributeName, value: style, range: NSRange(location: 0, length: stringValue.characters.count))
+        attrString.addAttribute(NSAttributedStringKey.paragraphStyle, value: style, range: NSRange(location: 0, length: stringValue.characters.count))
         label.numberOfLines = 2
         label.attributedText = attrString
     }

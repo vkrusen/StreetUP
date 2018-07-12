@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.7.3)
   - Firebase/Auth (5.4.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.0.2)
@@ -31,16 +32,20 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - pop (1.0.10)
+  - Stripe (13.0.3)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - Alamofire
   - Firebase/Auth
   - Firebase/Core
   - Koloda
+  - Stripe
   - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -51,9 +56,11 @@ SPEC REPOS:
     - Koloda
     - nanopb
     - pop
+    - Stripe
     - SVProgressHUD
 
 SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
   FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2
   FirebaseAuth: 096e457cdd4274412a66c4a35874787e411f5a03
@@ -64,8 +71,9 @@ SPEC CHECKSUMS:
   Koloda: 0d39b2aa188ccd1fac48d752acaf9802e683c625
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  Stripe: 76c203e21555089b708e6cbe972a3e3baf1ab4d8
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 9489a3c848655f8b58ed09ab00ec06319b7a0d81
+PODFILE CHECKSUM: b0de2c8d725cf2ac683c39b5a76e7460fe617f9f
 
 COCOAPODS: 1.5.2

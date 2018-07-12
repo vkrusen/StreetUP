@@ -10,5 +10,7 @@ target 'StreetUP' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'SVProgressHUD'
+  pod 'Stripe'
+  pod 'Alamofire'
 
 end
