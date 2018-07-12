@@ -49,6 +49,7 @@ class ViewController: BaseViewController {
     
     @IBOutlet var kolodaView: CustomKolodaView!
     @IBOutlet var bidButton: UIButton!
+    @IBOutlet var filterButton: UIButton!
     @IBOutlet var skipButton: UIButton!
     
     override func viewDidLoad() {
@@ -64,10 +65,12 @@ class ViewController: BaseViewController {
         
         self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
         
-        setupShadow(UIItem: bidButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "3FBD06")
-        setupShadow(UIItem: skipButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "9F041B")
+        setupShadow(UIItem: bidButton, offsetX: 3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "3FBD06")
+        setupShadow(UIItem: skipButton, offsetX: 3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "9F041B")
+        setupShadow(UIItem: filterButton, offsetX: 3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "054D75")
         bidButton.layer.cornerRadius = (bidButton.bounds.height / 2)
         skipButton.layer.cornerRadius = (skipButton.bounds.height / 2)
+        filterButton.layer.cornerRadius = 8
         
         append()
     }
@@ -78,6 +81,9 @@ class ViewController: BaseViewController {
     
     @IBAction func skipAction(_ sender: Any) {
         kolodaView.swipe(.right)
+    }
+    
+    @IBAction func filterAction(_ sender: Any) {
     }
     
     func append() {

@@ -112,7 +112,7 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
             print("SMS sent! Moving on to the next step")
             self.numberTextField.isUserInteractionEnabled = false
             self.doneButton.isUserInteractionEnabled = false
-            SVProgressHUD.showSuccess(withStatus: "Vänta på SMS med sin 6-siffriga kod")
+            SVProgressHUD.showSuccess(withStatus: "Vänta på SMS med din 6-siffriga kod")
             self.hideshowDigitTextfields(ishidden: false)
         })
     }
