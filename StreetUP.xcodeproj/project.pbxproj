@@ -104,7 +104,7 @@
 		A8047CA91E916AE900DEE309 /* StreetUP */ = {
 			isa = PBXGroup;
 			children = (
-				A839731F20F737F200D3BC4F /* Stripe */,
+				A839731F20F737F200D3BC4F /* Stripe - Firebase Functions */,
 				A839731320F5562B00D3BC4F /* Fonts */,
 				A839731420F5563A00D3BC4F /* Supporting Files */,
 				A839731520F5565000D3BC4F /* ViewControllers */,
@@ -156,7 +156,7 @@
 			path = "Card Supporting Files";
 			sourceTree = "<group>";
 		};
-		A839731F20F737F200D3BC4F /* Stripe */ = {
+		A839731F20F737F200D3BC4F /* Stripe - Firebase Functions */ = {
 			isa = PBXGroup;
 			children = (
 				A839733320F7384100D3BC4F /* BrowseProductsViewController.swift */,
@@ -167,7 +167,7 @@
 				A839733420F7384100D3BC4F /* PaymentContextFooterView.swift */,
 				A839732F20F7384000D3BC4F /* SettingsViewController.swift */,
 			);
-			name = Stripe;
+			name = "Stripe - Firebase Functions";
 			path = "New Group";
 			sourceTree = "<group>";
 		};
