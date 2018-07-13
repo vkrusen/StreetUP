@@ -9,15 +9,16 @@
 import Foundation
 import Stripe
 import Alamofire
+import Firebase
 
 class MyAPIClient: NSObject, STPEphemeralKeyProvider {
 
-    var baseURLString = "https://streetup-3552d.firebaseapp.com"
-    var baseURLS: String? = nil
+    var customerID = "cus_DDVQ3OSLzdnf4X"
+    var baseURLString: String? = nil
     
     static let sharedClient = MyAPIClient()
     var baseURL: URL {
-        if let urlString = self.baseURLS, let url = URL(string: urlString) {
+        if let urlString = self.baseURLString, let url = URL(string: urlString) {
             return url
         } else {
             fatalError()
@@ -29,9 +30,13 @@ class MyAPIClient: NSObject, STPEphemeralKeyProvider {
                         shippingAddress: STPAddress?,
                         shippingMethod: PKShippingMethod?,
                         completion: @escaping STPErrorBlock) {
-        let url = self.baseURL.appendingPathComponent("charge")
+        
+        let UID = Auth.auth().currentUser?.uid
+        let url = self.baseURL.appendingPathComponent("/stripe_customers/\(UID!)/charges")
+        print(url)
         var params: [String: Any] = [
             "source": result.source.stripeID,
+            "currency": "SEK",
             "amount": amount
         ]
         params["shipping"] = STPAddress.shippingInfoForCharge(with: shippingAddress, shippingMethod: shippingMethod)
@@ -56,7 +61,7 @@ class MyAPIClient: NSObject, STPEphemeralKeyProvider {
         
         let URLString = "https://us-central1-streetup-3552d.cloudfunctions.net/createEphemeralKeys" //API_ENDPOINT + CREATE_EMPHEREMAL_KEY as String;
         
-        let custID = "cus_DDVQ3OSLzdnf4X";
+        let custID = customerID;
         
         var requestData : [String : String]? = [String : String]()
             requestData?.updateValue(apiVersion, forKey: "api_version");
@@ -125,28 +130,28 @@ class MyAPIClient: NSObject, STPEphemeralKeyProvider {
     }
     
     /*
-    func createCustomerKey(withAPIVersion apiVersion: String, completion: @escaping STPJSONResponseCompletionBlock) {
-        let endpoint = "/ephemeral_keys"
-        
-        guard
-            !baseURLString.isEmpty,
-            let baseURL = URL(string: baseURLString),
-            let url = URL(string: endpoint, relativeTo: baseURL) else {
-                completion(nil, CustomerKeyError.missingBaseURL)
-                return
-        }
-        
-        let parameters: [String: Any] = ["api_version": apiVersion]
-        
-        Alamofire.request(url, method: .post, parameters: parameters).responseJSON { (response) in
-            guard let json = response.result.value as? [AnyHashable: Any] else {
-                completion(nil, CustomerKeyError.invalidResponse)
-                print(url)
-                return
-            }
-            print(json)
-            completion(json, nil)
-        }
-    }*/
+     func createCustomerKey(withAPIVersion apiVersion: String, completion: @escaping STPJSONResponseCompletionBlock) {
+     let endpoint = "/ephemeral_keys"
+     
+     guard
+     !baseURLString.isEmpty,
+     let baseURL = URL(string: baseURLString),
+     let url = URL(string: endpoint, relativeTo: baseURL) else {
+     completion(nil, CustomerKeyError.missingBaseURL)
+     return
+     }
+     
+     let parameters: [String: Any] = ["api_version": apiVersion]
+     
+     Alamofire.request(url, method: .post, parameters: parameters).responseJSON { (response) in
+     guard let json = response.result.value as? [AnyHashable: Any] else {
+     completion(nil, CustomerKeyError.invalidResponse)
+     print(url)
+     return
+     }
+     print(json)
+     completion(json, nil)
+     }
+     }*/
 
 }
