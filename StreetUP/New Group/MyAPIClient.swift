@@ -125,28 +125,28 @@ class MyAPIClient: NSObject, STPEphemeralKeyProvider {
     }
     
     /*
-    func createCustomerKey(withAPIVersion apiVersion: String, completion: @escaping STPJSONResponseCompletionBlock) {
-        let endpoint = "/ephemeral_keys"
-        
-        guard
-            !baseURLString.isEmpty,
-            let baseURL = URL(string: baseURLString),
-            let url = URL(string: endpoint, relativeTo: baseURL) else {
-                completion(nil, CustomerKeyError.missingBaseURL)
-                return
-        }
-        
-        let parameters: [String: Any] = ["api_version": apiVersion]
-        
-        Alamofire.request(url, method: .post, parameters: parameters).responseJSON { (response) in
-            guard let json = response.result.value as? [AnyHashable: Any] else {
-                completion(nil, CustomerKeyError.invalidResponse)
-                print(url)
-                return
-            }
-            print(json)
-            completion(json, nil)
-        }
-    }*/
+     func createCustomerKey(withAPIVersion apiVersion: String, completion: @escaping STPJSONResponseCompletionBlock) {
+     let endpoint = "/ephemeral_keys"
+     
+     guard
+     !baseURLString.isEmpty,
+     let baseURL = URL(string: baseURLString),
+     let url = URL(string: endpoint, relativeTo: baseURL) else {
+     completion(nil, CustomerKeyError.missingBaseURL)
+     return
+     }
+     
+     let parameters: [String: Any] = ["api_version": apiVersion]
+     
+     Alamofire.request(url, method: .post, parameters: parameters).responseJSON { (response) in
+     guard let json = response.result.value as? [AnyHashable: Any] else {
+     completion(nil, CustomerKeyError.invalidResponse)
+     print(url)
+     return
+     }
+     print(json)
+     completion(json, nil)
+     }
+     }*/
 
 }

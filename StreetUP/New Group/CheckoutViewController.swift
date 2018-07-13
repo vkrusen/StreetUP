@@ -13,7 +13,7 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
 
     // 1) To get started with this demo, first head to https://dashboard.stripe.com/account/apikeys
     // and copy your "Test Publishable Key" (it looks like pk_test_abcdef) into the line below.
-    let stripePublishableKey = "pk_live_NG9U31zq7zJL3eFSZhiUCZnN"
+    let stripePublishableKey = "pk_test_Ka3iOze1vZHU9h3X355IqRTw"
 
     // 2) Next, optionally, to have this demo save your user's payment details, head to
     // https://github.com/stripe/example-ios-backend/tree/v13.0.3, click "Deploy to Heroku", and follow
@@ -27,7 +27,7 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
 
     // These values will be shown to the user when they purchase with Apple Pay.
     let companyName = "Emoji Apparel"
-    let paymentCurrency = "sek"
+    let paymentCurrency = "SEK"
 
     let paymentContext: STPPaymentContext
 
@@ -258,19 +258,19 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
     // shipping method from your user, you should not implement this method.    
     func paymentContext(_ paymentContext: STPPaymentContext, didUpdateShippingAddress address: STPAddress, completion: @escaping STPShippingMethodsCompletionBlock) {
         let upsGround = PKShippingMethod()
-        upsGround.amount = 0
-        upsGround.label = "UPS Ground"
-        upsGround.detail = "Arrives in 3-5 days"
+        upsGround.amount = 58.00
+        upsGround.label = "PostNord"
+        upsGround.detail = "Leverans inom 1-2 dagar"
         upsGround.identifier = "ups_ground"
         let upsWorldwide = PKShippingMethod()
-        upsWorldwide.amount = 10.99
-        upsWorldwide.label = "UPS Worldwide Express"
-        upsWorldwide.detail = "Arrives in 1-3 days"
+        upsWorldwide.amount = 58.00
+        upsWorldwide.label = "PostNord"
+        upsWorldwide.detail = "Leverans inom 1-2 dagar"
         upsWorldwide.identifier = "ups_worldwide"
         let fedEx = PKShippingMethod()
-        fedEx.amount = 5.99
-        fedEx.label = "FedEx"
-        fedEx.detail = "Arrives tomorrow"
+        fedEx.amount = 122.00
+        fedEx.label = "PostNord Express"
+        fedEx.detail = "Leverans imorgon"
         fedEx.identifier = "fedex"
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -283,7 +283,7 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
                 completion(.invalid, error, nil, nil)
             }
             else {
-                fedEx.amount = 20.99
+                fedEx.amount = 122.00
                 completion(.valid, nil, [upsWorldwide, fedEx], fedEx)
             }
         }
