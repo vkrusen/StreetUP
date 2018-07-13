@@ -8,6 +8,7 @@
 
 import UIKit
 import Stripe
+import Firebase
 
 class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
 
@@ -19,7 +20,7 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
     // https://github.com/stripe/example-ios-backend/tree/v13.0.3, click "Deploy to Heroku", and follow
     // the instructions (don't worry, it's free). Replace nil on the line below with your
     // Heroku URL (it looks like https://blazing-sunrise-1234.herokuapp.com ).
-    let backendBaseURL: String? = "https://streetup-3552d.firebaseapp.com"
+    let backendBaseURL: String? = "https://streetup-3552d.firebaseio.com"
 
     // 3) Optionally, to enable Apple Pay, follow the instructions at https://stripe.com/docs/mobile/apple-pay
     // to create an Apple Merchant ID. Replace nil on the line below with it (it looks like merchant.com.yourappname).
@@ -191,10 +192,12 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
     // MARK: STPPaymentContextDelegate
 
     func paymentContext(_ paymentContext: STPPaymentContext, didCreatePaymentResult paymentResult: STPPaymentResult, completion: @escaping STPErrorBlock) {
+        print("paymentResult: \(paymentResult), amount: \(self.paymentContext.paymentAmount), shippingAddress: \(self.paymentContext.shippingAddress!), shippingMethod: \(self.paymentContext.selectedShippingMethod!), completion: /(completion)")
+        
         MyAPIClient.sharedClient.completeCharge(paymentResult,
                                                 amount: self.paymentContext.paymentAmount,
-                                                shippingAddress: self.paymentContext.shippingAddress,
-                                                shippingMethod: self.paymentContext.selectedShippingMethod,
+                                                shippingAddress: self.paymentContext.shippingAddress!,
+                                                shippingMethod: self.paymentContext.selectedShippingMethod!,
                                                 completion: completion)
     }
 
