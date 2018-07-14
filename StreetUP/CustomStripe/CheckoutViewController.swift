@@ -12,6 +12,10 @@ import Firebase
 
 class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
 
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var payButton: UIButton!
+    
     // 1) To get started with this demo, first head to https://dashboard.stripe.com/account/apikeys
     // and copy your "Test Publishable Key" (it looks like pk_test_abcdef) into the line below.
     let stripePublishableKey = "pk_test_Ka3iOze1vZHU9h3X355IqRTw"
@@ -72,6 +76,7 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
         self.productImage.text = product
         self.theme = settings.theme
         MyAPIClient.sharedClient.baseURLString = backendBaseURL
+        StripeClient.sharedClient.baseURLString = backendBaseURL
 
         // This code is included here for the sake of readability, but in your application you should set up your configuration and theme earlier, preferably in your App Delegate.
         let config = STPPaymentConfiguration.shared()
@@ -163,6 +168,21 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
         }
     }
 
+    @IBAction func payAction(_ sender: Any) {
+        // 1
+        guard ItemCheckoutChart.shared.canPay else {
+            let alertController = UIAlertController(title: "Warning", message: "Your cart is empty", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(alertAction)
+            present(alertController, animated: true)
+            return
+        }
+        // 2
+        let addCardViewController = STPAddCardViewController()
+        addCardViewController.delegate = self
+        navigationController?.pushViewController(addCardViewController, animated: true)
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         var insets = UIEdgeInsets.zero
@@ -194,7 +214,7 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
     func paymentContext(_ paymentContext: STPPaymentContext, didCreatePaymentResult paymentResult: STPPaymentResult, completion: @escaping STPErrorBlock) {
         print("paymentResult: \(paymentResult), amount: \(self.paymentContext.paymentAmount), shippingAddress: \(self.paymentContext.shippingAddress!), shippingMethod: \(self.paymentContext.selectedShippingMethod!), completion: /(completion)")
         
-        MyAPIClient.sharedClient.completeCharge(paymentResult,
+        StripeClient.sharedClient.completeCharge(paymentResult,
                                                 amount: self.paymentContext.paymentAmount,
                                                 shippingAddress: self.paymentContext.shippingAddress!,
                                                 shippingMethod: self.paymentContext.selectedShippingMethod!,
@@ -292,4 +312,58 @@ class CheckoutViewController: UIViewController, STPPaymentContextDelegate {
         }
     }
 
+}
+
+extension CheckoutViewController: STPAddCardViewControllerDelegate {
+    
+    func addCardViewControllerDidCancel(_ addCardViewController: STPAddCardViewController) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func addCardViewController(_ addCardViewController: STPAddCardViewController, didCreateToken token: STPToken, completion: @escaping STPErrorBlock) {
+        StripeClient.sharedClient.completeCharge(with: token, amount: ItemCheckoutChart.shared.total) { result in
+            switch result {
+            // 1
+            case .success:
+                completion(nil)
+                
+                let alertController = UIAlertController(title: "Congrats", message: "Your payment was successful!", preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
+                    self.navigationController?.popViewController(animated: true)
+                })
+                alertController.addAction(alertAction)
+                self.present(alertController, animated: true)
+            // 2
+            case .failure(let error):
+                completion(error)
+            }
+        }
+    }
+}
+
+extension CheckoutViewController: STPAddCardViewControllerDelegate {
+    
+    func addCardViewControllerDidCancel(_ addCardViewController: STPAddCardViewController) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func addCardViewController(_ addCardViewController: STPAddCardViewController, didCreateToken token: STPToken, completion: @escaping STPErrorBlock) {
+        StripeClient.shared.completeCharge(with: token, amount: CheckoutCart.shared.total) { result in
+            switch result {
+            // 1
+            case .success:
+                completion(nil)
+                
+                let alertController = UIAlertController(title: "Congrats", message: "Your payment was successful!", preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
+                    self.navigationController?.popViewController(animated: true)
+                })
+                alertController.addAction(alertAction)
+                self.present(alertController, animated: true)
+            // 2
+            case .failure(let error):
+                completion(error)
+            }
+        }
+    }
 }

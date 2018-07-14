@@ -17,7 +17,9 @@ enum Result {
 
 final class StripeClient {
     
-    static let shared = StripeClient()
+    static let sharedClient = StripeClient()
+    
+    var baseURLString: String? = nil
     
     private init() {
         // private
@@ -30,7 +32,7 @@ final class StripeClient {
         return url
     }()*/
     
-    let baseURLString: String? = "https://streetupapp.herokuapp.com/"
+    //let baseURLString: String? = "https://streetupapp.herokuapp.com/"
     
     var baseURL: URL {
         if let urlString = self.baseURLString, let url = URL(string: urlString) {
@@ -50,6 +52,7 @@ final class StripeClient {
             "currency": Constants.defaultCurrency,
             "description": Constants.defaultDescription
         ]
+        print(params)
         // 3
         Alamofire.request(url, method: .post, parameters: params)
             .validate(statusCode: 200..<300)

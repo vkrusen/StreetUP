@@ -11,21 +11,21 @@
 		A8047CAD1E916AE900DEE309 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8047CAC1E916AE900DEE309 /* ViewController.swift */; };
 		A8047CB01E916AE900DEE309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8047CAE1E916AE900DEE309 /* Main.storyboard */; };
 		A8047CB21E916AE900DEE309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8047CB11E916AE900DEE309 /* Assets.xcassets */; };
-		A82A3D9020FA2703003A6DB2 /* ItemCheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3D8F20FA2703003A6DB2 /* ItemCheckoutViewController.swift */; };
-		A82A3D9420FA27C9003A6DB2 /* ItemCheckoutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3D9320FA27C9003A6DB2 /* ItemCheckoutChart.swift */; };
-		A82A3D9620FA27F0003A6DB2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3D9520FA27F0003A6DB2 /* Item.swift */; };
-		A82A3D9A20FA2AE7003A6DB2 /* StripeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3D9920FA2AE7003A6DB2 /* StripeClient.swift */; };
-		A82A3D9C20FA2B0F003A6DB2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3D9B20FA2B0F003A6DB2 /* Constants.swift */; };
-		A82A3D9E20FA6302003A6DB2 /* exampleItem.json in Resources */ = {isa = PBXBuildFile; fileRef = A82A3D9D20FA6302003A6DB2 /* exampleItem.json */; };
-		A82A3DA020FA819D003A6DB2 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3D9F20FA819D003A6DB2 /* DataProvider.swift */; };
-		A82A3DA220FA839B003A6DB2 /* DetailItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DA120FA839B003A6DB2 /* DetailItemViewController.swift */; };
-		A839733520F7384100D3BC4F /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839732E20F7384000D3BC4F /* Buttons.swift */; };
-		A839733620F7384100D3BC4F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839732F20F7384000D3BC4F /* SettingsViewController.swift */; };
-		A839733720F7384100D3BC4F /* MyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839733020F7384000D3BC4F /* MyAPIClient.swift */; };
-		A839733820F7384100D3BC4F /* CheckoutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839733120F7384100D3BC4F /* CheckoutRowView.swift */; };
-		A839733920F7384100D3BC4F /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839733220F7384100D3BC4F /* CheckoutViewController.swift */; };
-		A839733A20F7384100D3BC4F /* BrowseProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839733320F7384100D3BC4F /* BrowseProductsViewController.swift */; };
-		A839733B20F7384100D3BC4F /* PaymentContextFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839733420F7384100D3BC4F /* PaymentContextFooterView.swift */; };
+		A82A3DC220FAA558003A6DB2 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DB320FAA555003A6DB2 /* FeaturedViewController.swift */; };
+		A82A3DC320FAA558003A6DB2 /* InventoryPuppyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DB420FAA555003A6DB2 /* InventoryPuppyTableViewCell.swift */; };
+		A82A3DC420FAA558003A6DB2 /* CheckoutCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DB520FAA556003A6DB2 /* CheckoutCart.swift */; };
+		A82A3DC520FAA558003A6DB2 /* puppies.json in Resources */ = {isa = PBXBuildFile; fileRef = A82A3DB620FAA556003A6DB2 /* puppies.json */; };
+		A82A3DC620FAA558003A6DB2 /* StripeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DB720FAA556003A6DB2 /* StripeClient.swift */; };
+		A82A3DC720FAA558003A6DB2 /* Puppy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DB820FAA557003A6DB2 /* Puppy.swift */; };
+		A82A3DC820FAA558003A6DB2 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DB920FAA557003A6DB2 /* CheckoutViewController.swift */; };
+		A82A3DC920FAA558003A6DB2 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DBA20FAA557003A6DB2 /* DataProvider.swift */; };
+		A82A3DCA20FAA558003A6DB2 /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DBB20FAA557003A6DB2 /* InventoryViewController.swift */; };
+		A82A3DCB20FAA558003A6DB2 /* NumberFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DBC20FAA557003A6DB2 /* NumberFormat.swift */; };
+		A82A3DCC20FAA558003A6DB2 /* CheckoutPuppyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DBD20FAA557003A6DB2 /* CheckoutPuppyTableViewCell.swift */; };
+		A82A3DCD20FAA558003A6DB2 /* CheckoutTotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DBE20FAA557003A6DB2 /* CheckoutTotalTableViewCell.swift */; };
+		A82A3DCE20FAA558003A6DB2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DBF20FAA557003A6DB2 /* Constants.swift */; };
+		A82A3DCF20FAA558003A6DB2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DC020FAA558003A6DB2 /* DetailViewController.swift */; };
+		A82A3DD020FAA558003A6DB2 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DC120FAA558003A6DB2 /* RowView.swift */; };
 		A83CAA0020F3ED990015469E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83CA9FF20F3ED990015469E /* RegisterViewController.swift */; };
 		A8EFCB4820EFDB5C009A5D81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8EFCB4720EFDB5C009A5D81 /* LaunchScreen.storyboard */; };
 		A8EFCB4D20EFE53D009A5D81 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EFCB4C20EFE53D009A5D81 /* CardView.swift */; };
@@ -47,21 +47,21 @@
 		A8047CAF1E916AE900DEE309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8047CB11E916AE900DEE309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8047CB61E916AE900DEE309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A82A3D8F20FA2703003A6DB2 /* ItemCheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCheckoutViewController.swift; sourceTree = "<group>"; };
-		A82A3D9320FA27C9003A6DB2 /* ItemCheckoutChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCheckoutChart.swift; sourceTree = "<group>"; };
-		A82A3D9520FA27F0003A6DB2 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		A82A3D9920FA2AE7003A6DB2 /* StripeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeClient.swift; sourceTree = "<group>"; };
-		A82A3D9B20FA2B0F003A6DB2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		A82A3D9D20FA6302003A6DB2 /* exampleItem.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = exampleItem.json; sourceTree = "<group>"; };
-		A82A3D9F20FA819D003A6DB2 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
-		A82A3DA120FA839B003A6DB2 /* DetailItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemViewController.swift; sourceTree = "<group>"; };
-		A839732E20F7384000D3BC4F /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
-		A839732F20F7384000D3BC4F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		A839733020F7384000D3BC4F /* MyAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAPIClient.swift; sourceTree = "<group>"; };
-		A839733120F7384100D3BC4F /* CheckoutRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutRowView.swift; sourceTree = "<group>"; };
-		A839733220F7384100D3BC4F /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
-		A839733320F7384100D3BC4F /* BrowseProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseProductsViewController.swift; sourceTree = "<group>"; };
-		A839733420F7384100D3BC4F /* PaymentContextFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentContextFooterView.swift; sourceTree = "<group>"; };
+		A82A3DB320FAA555003A6DB2 /* FeaturedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
+		A82A3DB420FAA555003A6DB2 /* InventoryPuppyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryPuppyTableViewCell.swift; sourceTree = "<group>"; };
+		A82A3DB520FAA556003A6DB2 /* CheckoutCart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutCart.swift; sourceTree = "<group>"; };
+		A82A3DB620FAA556003A6DB2 /* puppies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = puppies.json; sourceTree = "<group>"; };
+		A82A3DB720FAA556003A6DB2 /* StripeClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripeClient.swift; sourceTree = "<group>"; };
+		A82A3DB820FAA557003A6DB2 /* Puppy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puppy.swift; sourceTree = "<group>"; };
+		A82A3DB920FAA557003A6DB2 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		A82A3DBA20FAA557003A6DB2 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		A82A3DBB20FAA557003A6DB2 /* InventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
+		A82A3DBC20FAA557003A6DB2 /* NumberFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormat.swift; sourceTree = "<group>"; };
+		A82A3DBD20FAA557003A6DB2 /* CheckoutPuppyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutPuppyTableViewCell.swift; sourceTree = "<group>"; };
+		A82A3DBE20FAA557003A6DB2 /* CheckoutTotalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutTotalTableViewCell.swift; sourceTree = "<group>"; };
+		A82A3DBF20FAA557003A6DB2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A82A3DC020FAA558003A6DB2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A82A3DC120FAA558003A6DB2 /* RowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		A83CA9FE20F3E8E40015469E /* StreetUP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StreetUP.entitlements; sourceTree = "<group>"; };
 		A83CA9FF20F3ED990015469E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A8EFCB4720EFDB5C009A5D81 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -120,8 +120,7 @@
 		A8047CA91E916AE900DEE309 /* StreetUP */ = {
 			isa = PBXGroup;
 			children = (
-				A82A3D8E20FA23DD003A6DB2 /* CustomStripe */,
-				A839731F20F737F200D3BC4F /* Stripe - Firebase Functions */,
+				A82A3DB220FAA525003A6DB2 /* Stripe */,
 				A839731320F5562B00D3BC4F /* Fonts */,
 				A839731420F5563A00D3BC4F /* Supporting Files */,
 				A839731520F5565000D3BC4F /* ViewControllers */,
@@ -130,19 +129,27 @@
 			path = StreetUP;
 			sourceTree = "<group>";
 		};
-		A82A3D8E20FA23DD003A6DB2 /* CustomStripe */ = {
+		A82A3DB220FAA525003A6DB2 /* Stripe */ = {
 			isa = PBXGroup;
 			children = (
-				A82A3D9B20FA2B0F003A6DB2 /* Constants.swift */,
-				A82A3D9920FA2AE7003A6DB2 /* StripeClient.swift */,
-				A82A3D9F20FA819D003A6DB2 /* DataProvider.swift */,
-				A82A3DA120FA839B003A6DB2 /* DetailItemViewController.swift */,
-				A82A3D8F20FA2703003A6DB2 /* ItemCheckoutViewController.swift */,
-				A82A3D9320FA27C9003A6DB2 /* ItemCheckoutChart.swift */,
-				A82A3D9520FA27F0003A6DB2 /* Item.swift */,
-				A82A3D9D20FA6302003A6DB2 /* exampleItem.json */,
+				A82A3DB520FAA556003A6DB2 /* CheckoutCart.swift */,
+				A82A3DBD20FAA557003A6DB2 /* CheckoutPuppyTableViewCell.swift */,
+				A82A3DBE20FAA557003A6DB2 /* CheckoutTotalTableViewCell.swift */,
+				A82A3DB920FAA557003A6DB2 /* CheckoutViewController.swift */,
+				A82A3DBF20FAA557003A6DB2 /* Constants.swift */,
+				A82A3DBA20FAA557003A6DB2 /* DataProvider.swift */,
+				A82A3DC020FAA558003A6DB2 /* DetailViewController.swift */,
+				A82A3DB320FAA555003A6DB2 /* FeaturedViewController.swift */,
+				A82A3DB420FAA555003A6DB2 /* InventoryPuppyTableViewCell.swift */,
+				A82A3DBB20FAA557003A6DB2 /* InventoryViewController.swift */,
+				A82A3DBC20FAA557003A6DB2 /* NumberFormat.swift */,
+				A82A3DB620FAA556003A6DB2 /* puppies.json */,
+				A82A3DB820FAA557003A6DB2 /* Puppy.swift */,
+				A82A3DC120FAA558003A6DB2 /* RowView.swift */,
+				A82A3DB720FAA556003A6DB2 /* StripeClient.swift */,
 			);
-			path = CustomStripe;
+			name = Stripe;
+			path = "New Group1";
 			sourceTree = "<group>";
 		};
 		A839731320F5562B00D3BC4F /* Fonts */ = {
@@ -186,21 +193,6 @@
 				A8EFCB4C20EFE53D009A5D81 /* CardView.swift */,
 			);
 			path = "Card Supporting Files";
-			sourceTree = "<group>";
-		};
-		A839731F20F737F200D3BC4F /* Stripe - Firebase Functions */ = {
-			isa = PBXGroup;
-			children = (
-				A839733320F7384100D3BC4F /* BrowseProductsViewController.swift */,
-				A839732E20F7384000D3BC4F /* Buttons.swift */,
-				A839733120F7384100D3BC4F /* CheckoutRowView.swift */,
-				A839733220F7384100D3BC4F /* CheckoutViewController.swift */,
-				A839733020F7384000D3BC4F /* MyAPIClient.swift */,
-				A839733420F7384100D3BC4F /* PaymentContextFooterView.swift */,
-				A839732F20F7384000D3BC4F /* SettingsViewController.swift */,
-			);
-			name = "Stripe - Firebase Functions";
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		F5569262D3553E5ABE600BDB /* Pods */ = {
@@ -285,12 +277,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8EFCB5920F01927009A5D81 /* Gaegu-Regular.ttf in Resources */,
-				A82A3D9E20FA6302003A6DB2 /* exampleItem.json in Resources */,
 				A8EFCB4820EFDB5C009A5D81 /* LaunchScreen.storyboard in Resources */,
 				A8047CB21E916AE900DEE309 /* Assets.xcassets in Resources */,
 				A8047CB01E916AE900DEE309 /* Main.storyboard in Resources */,
 				A8EFCB5520EFEF6B009A5D81 /* CardView.xib in Resources */,
 				A8EFCB5F20F15175009A5D81 /* GoogleService-Info.plist in Resources */,
+				A82A3DC520FAA558003A6DB2 /* puppies.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +315,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-StreetUP/Pods-StreetUP-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
@@ -334,6 +327,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
@@ -354,27 +348,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A839733820F7384100D3BC4F /* CheckoutRowView.swift in Sources */,
+				A82A3DCD20FAA558003A6DB2 /* CheckoutTotalTableViewCell.swift in Sources */,
+				A82A3DCE20FAA558003A6DB2 /* Constants.swift in Sources */,
 				A8EFCB5120EFE977009A5D81 /* CustomKolodaView.swift in Sources */,
-				A82A3D9620FA27F0003A6DB2 /* Item.swift in Sources */,
-				A82A3DA020FA819D003A6DB2 /* DataProvider.swift in Sources */,
-				A82A3D9A20FA2AE7003A6DB2 /* StripeClient.swift in Sources */,
+				A82A3DCC20FAA558003A6DB2 /* CheckoutPuppyTableViewCell.swift in Sources */,
+				A82A3DC820FAA558003A6DB2 /* CheckoutViewController.swift in Sources */,
 				A8EFCB5B20F0D434009A5D81 /* BaseViewController.swift in Sources */,
 				A8047CAD1E916AE900DEE309 /* ViewController.swift in Sources */,
-				A82A3DA220FA839B003A6DB2 /* DetailItemViewController.swift in Sources */,
-				A839733B20F7384100D3BC4F /* PaymentContextFooterView.swift in Sources */,
-				A839733920F7384100D3BC4F /* CheckoutViewController.swift in Sources */,
+				A82A3DCF20FAA558003A6DB2 /* DetailViewController.swift in Sources */,
 				A83CAA0020F3ED990015469E /* RegisterViewController.swift in Sources */,
+				A82A3DC720FAA558003A6DB2 /* Puppy.swift in Sources */,
 				A8EFCB4D20EFE53D009A5D81 /* CardView.swift in Sources */,
+				A82A3DCA20FAA558003A6DB2 /* InventoryViewController.swift in Sources */,
+				A82A3DC320FAA558003A6DB2 /* InventoryPuppyTableViewCell.swift in Sources */,
 				A8EFCB4F20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift in Sources */,
-				A82A3D9420FA27C9003A6DB2 /* ItemCheckoutChart.swift in Sources */,
-				A82A3D9020FA2703003A6DB2 /* ItemCheckoutViewController.swift in Sources */,
-				A839733A20F7384100D3BC4F /* BrowseProductsViewController.swift in Sources */,
-				A82A3D9C20FA2B0F003A6DB2 /* Constants.swift in Sources */,
+				A82A3DC420FAA558003A6DB2 /* CheckoutCart.swift in Sources */,
+				A82A3DC920FAA558003A6DB2 /* DataProvider.swift in Sources */,
+				A82A3DD020FAA558003A6DB2 /* RowView.swift in Sources */,
+				A82A3DC220FAA558003A6DB2 /* FeaturedViewController.swift in Sources */,
 				A8047CAB1E916AE900DEE309 /* AppDelegate.swift in Sources */,
-				A839733720F7384100D3BC4F /* MyAPIClient.swift in Sources */,
-				A839733520F7384100D3BC4F /* Buttons.swift in Sources */,
-				A839733620F7384100D3BC4F /* SettingsViewController.swift in Sources */,
+				A82A3DC620FAA558003A6DB2 /* StripeClient.swift in Sources */,
+				A82A3DCB20FAA558003A6DB2 /* NumberFormat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
