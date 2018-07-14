@@ -22,6 +22,7 @@ import Firebase
 class MyAPIClient: NSObject, STPEphemeralKeyProvider {
     
     static let sharedClient = MyAPIClient()
+    
     var baseURLString: String? = nil
     var baseURL: URL {
         if let urlString = self.baseURLString, let url = URL(string: urlString) {
@@ -30,7 +31,6 @@ class MyAPIClient: NSObject, STPEphemeralKeyProvider {
             fatalError()
         }
     }
-
     
     func completeCharge(_ result: STPPaymentResult,
                         amount: Int,

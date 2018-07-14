@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BH7-SV-nLz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -98,6 +98,113 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Detail Item View Controller-->
+        <scene sceneID="xLe-xk-7Wj">
+            <objects>
+                <viewController id="6Pa-9b-pW4" customClass="DetailItemViewController" customModule="StreetUP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FQf-yD-ESK"/>
+                        <viewControllerLayoutGuide type="bottom" id="rXn-su-sgE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A0b-WS-vcf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOc-N4-cIp">
+                                <rect key="frame" x="148" y="519" width="79" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="3ZT-6v-EG7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="79" id="Uzk-YC-dMt"/>
+                                </constraints>
+                                <state key="normal" title="Buy-It-Now"/>
+                                <connections>
+                                    <action selector="binAction:" destination="6Pa-9b-pW4" eventType="touchUpInside" id="kmX-0v-lKG"/>
+                                    <segue destination="chK-iZ-ten" kind="show" id="r06-Pb-qtY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jOc-N4-cIp" firstAttribute="centerX" secondItem="A0b-WS-vcf" secondAttribute="centerX" id="NEy-Yu-MF4"/>
+                            <constraint firstItem="rXn-su-sgE" firstAttribute="top" secondItem="jOc-N4-cIp" secondAttribute="bottom" constant="118" id="j4i-AD-QJC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xt2-3m-s1G"/>
+                    <connections>
+                        <outlet property="binButton" destination="jOc-N4-cIp" id="dpJ-t4-2uG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sb0-W5-Qdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-296.80000000000001" y="861.3193403298352"/>
+        </scene>
+        <!--Item Checkout View Controller-->
+        <scene sceneID="JWs-nq-tf1">
+            <objects>
+                <viewController id="chK-iZ-ten" customClass="ItemCheckoutViewController" customModule="StreetUP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dAZ-jo-Dm0"/>
+                        <viewControllerLayoutGuide type="bottom" id="bm4-zM-HVh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cA9-w0-F4E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcH-jw-dSe">
+                                <rect key="frame" x="150" y="500" width="75" height="40"/>
+                                <color key="backgroundColor" red="0.52941176469999995" green="0.82745098039999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ADy-xb-gYQ"/>
+                                    <constraint firstAttribute="width" constant="75" id="v9I-EC-jwh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Betala">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueDidTap:" destination="chK-iZ-ten" eventType="touchUpInside" id="fm2-n9-wMd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99v-yv-dHf">
+                                <rect key="frame" x="87" y="174" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6N1-qt-kcS"/>
+                                    <constraint firstAttribute="width" constant="200" id="7cZ-RJ-2hi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.32156862749999998" green="0.61960784310000006" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laG-rU-tLW">
+                                <rect key="frame" x="87" y="216" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="LR2-ak-nAQ"/>
+                                    <constraint firstAttribute="height" constant="40" id="sTh-Xh-8Bz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.32156862749999998" green="0.61960784310000006" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="laG-rU-tLW" firstAttribute="top" secondItem="99v-yv-dHf" secondAttribute="bottom" constant="2" id="3Ik-h8-kpI"/>
+                            <constraint firstItem="UcH-jw-dSe" firstAttribute="centerX" secondItem="cA9-w0-F4E" secondAttribute="centerX" id="Azo-rJ-INe"/>
+                            <constraint firstItem="99v-yv-dHf" firstAttribute="top" secondItem="dAZ-jo-Dm0" secondAttribute="bottom" constant="110" id="P0b-d6-bbu"/>
+                            <constraint firstItem="laG-rU-tLW" firstAttribute="centerX" secondItem="cA9-w0-F4E" secondAttribute="centerX" id="SAk-dO-1pv"/>
+                            <constraint firstItem="99v-yv-dHf" firstAttribute="centerX" secondItem="cA9-w0-F4E" secondAttribute="centerX" id="rTU-kY-Dah"/>
+                            <constraint firstItem="bm4-zM-HVh" firstAttribute="top" secondItem="UcH-jw-dSe" secondAttribute="bottom" constant="127" id="zhr-YI-UeE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="priceLabel" destination="laG-rU-tLW" id="6UU-5h-fZZ"/>
+                        <outlet property="titleLabel" destination="99v-yv-dHf" id="obw-xZ-uZ5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oN0-Mx-bvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="862.21889055472275"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="8mb-TE-jqL">
@@ -309,6 +416,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hgp-N1-TtA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gLb-UC-n0l">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BH7-SV-nLz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aG6-w0-pHz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6Pa-9b-pW4" kind="relationship" relationship="rootViewController" id="nxr-Ud-pWc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y55-co-H2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1060" y="862"/>
         </scene>
     </scenes>
 </document>

@@ -11,6 +11,14 @@
 		A8047CAD1E916AE900DEE309 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8047CAC1E916AE900DEE309 /* ViewController.swift */; };
 		A8047CB01E916AE900DEE309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8047CAE1E916AE900DEE309 /* Main.storyboard */; };
 		A8047CB21E916AE900DEE309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8047CB11E916AE900DEE309 /* Assets.xcassets */; };
+		A82A3D9020FA2703003A6DB2 /* ItemCheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3D8F20FA2703003A6DB2 /* ItemCheckoutViewController.swift */; };
+		A82A3D9420FA27C9003A6DB2 /* ItemCheckoutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3D9320FA27C9003A6DB2 /* ItemCheckoutChart.swift */; };
+		A82A3D9620FA27F0003A6DB2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3D9520FA27F0003A6DB2 /* Item.swift */; };
+		A82A3D9A20FA2AE7003A6DB2 /* StripeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3D9920FA2AE7003A6DB2 /* StripeClient.swift */; };
+		A82A3D9C20FA2B0F003A6DB2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3D9B20FA2B0F003A6DB2 /* Constants.swift */; };
+		A82A3D9E20FA6302003A6DB2 /* exampleItem.json in Resources */ = {isa = PBXBuildFile; fileRef = A82A3D9D20FA6302003A6DB2 /* exampleItem.json */; };
+		A82A3DA020FA819D003A6DB2 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3D9F20FA819D003A6DB2 /* DataProvider.swift */; };
+		A82A3DA220FA839B003A6DB2 /* DetailItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DA120FA839B003A6DB2 /* DetailItemViewController.swift */; };
 		A839733520F7384100D3BC4F /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839732E20F7384000D3BC4F /* Buttons.swift */; };
 		A839733620F7384100D3BC4F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839732F20F7384000D3BC4F /* SettingsViewController.swift */; };
 		A839733720F7384100D3BC4F /* MyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839733020F7384000D3BC4F /* MyAPIClient.swift */; };
@@ -39,6 +47,14 @@
 		A8047CAF1E916AE900DEE309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8047CB11E916AE900DEE309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8047CB61E916AE900DEE309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A82A3D8F20FA2703003A6DB2 /* ItemCheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCheckoutViewController.swift; sourceTree = "<group>"; };
+		A82A3D9320FA27C9003A6DB2 /* ItemCheckoutChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCheckoutChart.swift; sourceTree = "<group>"; };
+		A82A3D9520FA27F0003A6DB2 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A82A3D9920FA2AE7003A6DB2 /* StripeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeClient.swift; sourceTree = "<group>"; };
+		A82A3D9B20FA2B0F003A6DB2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A82A3D9D20FA6302003A6DB2 /* exampleItem.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = exampleItem.json; sourceTree = "<group>"; };
+		A82A3D9F20FA819D003A6DB2 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		A82A3DA120FA839B003A6DB2 /* DetailItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemViewController.swift; sourceTree = "<group>"; };
 		A839732E20F7384000D3BC4F /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		A839732F20F7384000D3BC4F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A839733020F7384000D3BC4F /* MyAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAPIClient.swift; sourceTree = "<group>"; };
@@ -104,6 +120,7 @@
 		A8047CA91E916AE900DEE309 /* StreetUP */ = {
 			isa = PBXGroup;
 			children = (
+				A82A3D8E20FA23DD003A6DB2 /* CustomStripe */,
 				A839731F20F737F200D3BC4F /* Stripe - Firebase Functions */,
 				A839731320F5562B00D3BC4F /* Fonts */,
 				A839731420F5563A00D3BC4F /* Supporting Files */,
@@ -111,6 +128,21 @@
 				A8047CAE1E916AE900DEE309 /* Main.storyboard */,
 			);
 			path = StreetUP;
+			sourceTree = "<group>";
+		};
+		A82A3D8E20FA23DD003A6DB2 /* CustomStripe */ = {
+			isa = PBXGroup;
+			children = (
+				A82A3D9B20FA2B0F003A6DB2 /* Constants.swift */,
+				A82A3D9920FA2AE7003A6DB2 /* StripeClient.swift */,
+				A82A3D9F20FA819D003A6DB2 /* DataProvider.swift */,
+				A82A3DA120FA839B003A6DB2 /* DetailItemViewController.swift */,
+				A82A3D8F20FA2703003A6DB2 /* ItemCheckoutViewController.swift */,
+				A82A3D9320FA27C9003A6DB2 /* ItemCheckoutChart.swift */,
+				A82A3D9520FA27F0003A6DB2 /* Item.swift */,
+				A82A3D9D20FA6302003A6DB2 /* exampleItem.json */,
+			);
+			path = CustomStripe;
 			sourceTree = "<group>";
 		};
 		A839731320F5562B00D3BC4F /* Fonts */ = {
@@ -253,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8EFCB5920F01927009A5D81 /* Gaegu-Regular.ttf in Resources */,
+				A82A3D9E20FA6302003A6DB2 /* exampleItem.json in Resources */,
 				A8EFCB4820EFDB5C009A5D81 /* LaunchScreen.storyboard in Resources */,
 				A8047CB21E916AE900DEE309 /* Assets.xcassets in Resources */,
 				A8047CB01E916AE900DEE309 /* Main.storyboard in Resources */,
@@ -323,14 +356,21 @@
 			files = (
 				A839733820F7384100D3BC4F /* CheckoutRowView.swift in Sources */,
 				A8EFCB5120EFE977009A5D81 /* CustomKolodaView.swift in Sources */,
+				A82A3D9620FA27F0003A6DB2 /* Item.swift in Sources */,
+				A82A3DA020FA819D003A6DB2 /* DataProvider.swift in Sources */,
+				A82A3D9A20FA2AE7003A6DB2 /* StripeClient.swift in Sources */,
 				A8EFCB5B20F0D434009A5D81 /* BaseViewController.swift in Sources */,
 				A8047CAD1E916AE900DEE309 /* ViewController.swift in Sources */,
+				A82A3DA220FA839B003A6DB2 /* DetailItemViewController.swift in Sources */,
 				A839733B20F7384100D3BC4F /* PaymentContextFooterView.swift in Sources */,
 				A839733920F7384100D3BC4F /* CheckoutViewController.swift in Sources */,
 				A83CAA0020F3ED990015469E /* RegisterViewController.swift in Sources */,
 				A8EFCB4D20EFE53D009A5D81 /* CardView.swift in Sources */,
 				A8EFCB4F20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift in Sources */,
+				A82A3D9420FA27C9003A6DB2 /* ItemCheckoutChart.swift in Sources */,
+				A82A3D9020FA2703003A6DB2 /* ItemCheckoutViewController.swift in Sources */,
 				A839733A20F7384100D3BC4F /* BrowseProductsViewController.swift in Sources */,
+				A82A3D9C20FA2B0F003A6DB2 /* Constants.swift in Sources */,
 				A8047CAB1E916AE900DEE309 /* AppDelegate.swift in Sources */,
 				A839733720F7384100D3BC4F /* MyAPIClient.swift in Sources */,
 				A839733520F7384100D3BC4F /* Buttons.swift in Sources */,
