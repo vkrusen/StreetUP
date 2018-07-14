@@ -30,25 +30,7 @@ class MyAPIClient: NSObject, STPEphemeralKeyProvider {
             fatalError()
         }
     }
-    
-    func createCustomerKey(withAPIVersion apiVersion: String, completion: @escaping STPJSONResponseCompletionBlock) {
-        
-        let email = "victorkrusenstrahle@gmail.com" // should be: (Auth.auth().currentUser?.email)!
-        let customerIDURL = self.baseURL.appendingPathComponent("customer")
-        let customerIDParameters = ["email":email]
-        
-        Alamofire.request(customerIDURL, method: .post, parameters: customerIDParameters, encoding: JSONEncoding.default).validate(statusCode: 200..<300).responseJSON { responseJSON in
-            
-            switch responseJSON.result {
-            case .success(let json):
-                completion(json as? [String:AnyObject], nil)
-                print("\(json)\n\n\n\n")
-            case .failure(let error):
-                completion(nil, error)
-                print("Error message:\(String(describing: responseJSON.result.error))")
-                break
-            }
-        }
+
     
     func completeCharge(_ result: STPPaymentResult,
                         amount: Int,
