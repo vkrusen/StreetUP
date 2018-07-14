@@ -38,20 +38,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window.makeKeyAndVisible()
             self.window = window
         } else { // If user isn't logged in, do this.
-            let rootVC = BrowseProductsViewController()
-            let navigationController = UINavigationController(rootViewController: rootVC)
-            let window = UIWindow(frame: UIScreen.main.bounds)
-            window.rootViewController = navigationController;
-            window.makeKeyAndVisible()
-            self.window = window
-            
-            /*
             let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let initialViewControllerRegistration : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "RegisterViewControllerId") as! RegisterViewController
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = initialViewControllerRegistration
             self.window?.makeKeyAndVisible()
-            */
         }
         
         return true

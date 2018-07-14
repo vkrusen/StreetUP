@@ -17,6 +17,7 @@
 import Foundation
 import Stripe
 import Alamofire
+import Firebase
 
 class MyAPIClient: NSObject, STPEphemeralKeyProvider {
     
@@ -30,28 +31,48 @@ class MyAPIClient: NSObject, STPEphemeralKeyProvider {
         }
     }
     
+    func createCustomerKey(withAPIVersion apiVersion: String, completion: @escaping STPJSONResponseCompletionBlock) {
+        
+        let email = "victorkrusenstrahle@gmail.com" // should be: (Auth.auth().currentUser?.email)!
+        let customerIDURL = self.baseURL.appendingPathComponent("customer")
+        let customerIDParameters = ["email":email]
+        
+        Alamofire.request(customerIDURL, method: .post, parameters: customerIDParameters, encoding: JSONEncoding.default).validate(statusCode: 200..<300).responseJSON { responseJSON in
+            
+            switch responseJSON.result {
+            case .success(let json):
+                completion(json as? [String:AnyObject], nil)
+                print("\(json)\n\n\n\n")
+            case .failure(let error):
+                completion(nil, error)
+                print("Error message:\(String(describing: responseJSON.result.error))")
+                break
+            }
+        }
+    
     func completeCharge(_ result: STPPaymentResult,
                         amount: Int,
                         shippingAddress: STPAddress?,
                         shippingMethod: PKShippingMethod?,
                         completion: @escaping STPErrorBlock) {
         let url = self.baseURL.appendingPathComponent("charge")
-        var params: [String: Any] = [
-            "customer": "cus_DDVQ3OSLzdnf4X",
-            "amount": amount,
-            "currency" : "SEK"
-        ]
-        params["shipping"] = STPAddress.shippingInfoForCharge(with: shippingAddress, shippingMethod: shippingMethod)
-        Alamofire.request(url, method: .post, parameters: params)
-            .validate(statusCode: 200..<300)
-            .responseString { response in
-                switch response.result {
-                case .success:
-                    completion(nil)
-                case .failure(let error):
-                    completion(error)
-                }
-        }
+        
+            var params: [String: Any] = [
+                "customer": "cus_DDVQ3OSLzdnf4X",
+                "amount": amount,
+                "currency" : "SEK"
+            ]
+            params["shipping"] = STPAddress.shippingInfoForCharge(with: shippingAddress, shippingMethod: shippingMethod)
+            Alamofire.request(url, method: .post, parameters: params)
+                .validate(statusCode: 200..<300)
+                .responseString { response in
+                    switch response.result {
+                    case .success:
+                        completion(nil)
+                    case .failure(let error):
+                        completion(error)
+                    }
+            }
     }
     
     func createCustomerKey(withAPIVersion apiVersion: String, completion: @escaping STPJSONResponseCompletionBlock) {
