@@ -36,34 +36,34 @@ final class CheckoutCart {
     // private
   }
 
-  private var puppies: [Puppy] = []
+  private var items: [Item] = []
 
-  var cart: [Puppy] {
-    return puppies
+  var cart: [Item] {
+    return items
   }
   
   var canPay: Bool {
-    return !puppies.isEmpty
+    return !items.isEmpty
   }
 
   var total: Int {
-    return puppies.reduce(0) { (result, puppy) -> Int in
-      return result + puppy.price
+    return items.reduce(0) { (result, item) -> Int in
+      return result + item.price
     }
   }
 
-  func addPuppy(_ puppy: Puppy) {
-    guard !puppies.contains(puppy) else {
+  func addItem(_ item: Item) {
+    guard !items.contains(item) else {
       return
     }
-    puppies.append(puppy)
+    items.append(item)
   }
   
-  func removePuppy(_ puppy: Puppy) -> Bool {
-    guard let index = puppies.index(of: puppy) else {
+  func removeItem(_ item: Item) -> Bool {
+    guard let index = items.index(of: item) else {
       return false
     }
-    puppies.remove(at: index)
+    items.remove(at: index)
     return true
   }
 

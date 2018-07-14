@@ -37,13 +37,13 @@ class FeaturedViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = "Featured Puppy"
+    title = "Featured Item"
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let detailViewController = segue.destination as? DetailViewController, 
       segue.identifier == SegueIdentifiers.Embed {
-      detailViewController.puppy = DataProvider.shared.featuredPuppy
+      detailViewController.item = DataProvider.shared.featuredItem
     }
   }
 

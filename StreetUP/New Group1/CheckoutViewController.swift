@@ -32,13 +32,13 @@ import Stripe
 class CheckoutViewController: UIViewController {
 
   private enum Section: Int {
-    case puppies = 0
+    case items = 0
     case total
     
     static func cellIdentifier(for section: Section) -> String {
       switch section {
-      case .puppies:
-        return "CheckoutPuppyTableViewCell"
+      case .items:
+        return "CheckoutItemTableViewCell"
       case .total:
         return "CheckoutTotalTableViewCell"
       }
@@ -111,7 +111,7 @@ extension CheckoutViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if section == Section.puppies.rawValue {
+    if section == Section.items.rawValue {
       return CheckoutCart.shared.cart.count
     } else {
       return 1
@@ -125,9 +125,9 @@ extension CheckoutViewController: UITableViewDataSource {
     let identifier = Section.cellIdentifier(for: section)
     let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
     switch cell {
-    case let cell as CheckoutPuppyTableViewCell:
-      let puppy = CheckoutCart.shared.cart[indexPath.row]
-      cell.configure(with: puppy)
+    case let cell as CheckoutItemTableViewCell:
+      let item = CheckoutCart.shared.cart[indexPath.row]
+      cell.configure(with: item)
     case let cell as CheckoutTotalTableViewCell:
       let total = CheckoutCart.shared.total
       cell.configure(with: total)
@@ -138,7 +138,7 @@ extension CheckoutViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-    if indexPath.section == Section.puppies.rawValue {
+    if indexPath.section == Section.items.rawValue {
       return true
     } else {
       return false
@@ -149,8 +149,8 @@ extension CheckoutViewController: UITableViewDataSource {
     guard editingStyle == .delete else {
       return
     }
-    let puppy = CheckoutCart.shared.cart[indexPath.row]
-    let isRemoved = CheckoutCart.shared.removePuppy(puppy)
+    let item = CheckoutCart.shared.cart[indexPath.row]
+    let isRemoved = CheckoutCart.shared.removeItem(item)
     if isRemoved {
       tableView.beginUpdates()
       tableView.deleteRows(at: [indexPath], with: .automatic)

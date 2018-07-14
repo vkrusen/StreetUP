@@ -36,20 +36,20 @@ final class DataProvider {
     // private
   }
 
-  var allPuppies: [Puppy] {
-    guard let jsonData = read(from: "puppies") else {
-      fatalError("The app cannot work without puppies")
+  var allItems: [Item] {
+    guard let jsonData = read(from: "items") else {
+      fatalError("The app cannot work without items")
     }
     let decoder = JSONDecoder()
-    guard let decoded = try? decoder.decode([Puppy].self, from: jsonData) else {
+    guard let decoded = try? decoder.decode([Item].self, from: jsonData) else {
       fatalError("Invalid JSON data")
     }
     return decoded
   }
 
-  var featuredPuppy: Puppy {
-    let randomIndex = Int(arc4random_uniform(UInt32(allPuppies.count)))
-    return allPuppies[randomIndex]
+  var featuredItem: Item {
+    let randomIndex = Int(arc4random_uniform(UInt32(allItems.count)))
+    return allItems[randomIndex]
   }
   
   private func read(from path: String) -> Data? {

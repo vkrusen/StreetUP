@@ -27,15 +27,26 @@
 /// THE SOFTWARE.
 
 import Foundation
-import UIKit
 
-class CheckoutPuppyTableViewCell: UITableViewCell {
+struct Item: Codable {
+  let id: Int
+  let name: String
+  let price: Int
+  let photoUrl: URL
+  let breed: String
   
-  @IBOutlet var nameLabel: UILabel!
-  @IBOutlet var priceLabel: UILabel!
-  
-  func configure(with puppy: Puppy) {
-    nameLabel.text = puppy.name
-    priceLabel.text = NumberFormat.format(value: puppy.price)
+  enum CodingKeys: String, CodingKey {
+    case id = "id"
+    case name = "name"
+    case price = "price"
+    case breed = "breed"
+    case photoUrl = "photo_large"
+  }
+}
+
+// MARK: - Equatable
+extension Item: Equatable {
+  static func ==(lhs: Item, rhs: Item) -> Bool {
+    return lhs.id == rhs.id
   }
 }

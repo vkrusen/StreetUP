@@ -32,5 +32,5 @@ enum Constants {
   static let publishableKey = "pk_test_Ka3iOze1vZHU9h3X355IqRTw"
   static let baseURLString = "https://streetupapp.herokuapp.com/"
   static let defaultCurrency = "sek"
-  static let defaultDescription = "Purchase from RWPuppies iOS"
+  static let defaultDescription = "Purchase from StreetUP iOS"
 }

@@ -26,27 +26,23 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import Foundation
+import UIKit
+import AlamofireImage
 
-struct Puppy: Codable {
-  let id: Int
-  let name: String
-  let price: Int
-  let photoUrl: URL
-  let breed: String
+class InventoryItemTableViewCell: UITableViewCell {
   
-  enum CodingKeys: String, CodingKey {
-    case id = "id"
-    case name = "name"
-    case price = "price"
-    case breed = "breed"
-    case photoUrl = "photo_large"
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    photoImageView.af_cancelImageRequest()
   }
-}
-
-// MARK: - Equatable
-extension Puppy: Equatable {
-  static func ==(lhs: Puppy, rhs: Puppy) -> Bool {
-    return lhs.id == rhs.id
+  
+  @IBOutlet var photoImageView: UIImageView!
+  @IBOutlet var nameLabel: UILabel!
+  @IBOutlet var detailLabel: UILabel!
+  
+  func configure(with item: Item) {
+    nameLabel.text = item.name
+    detailLabel.text = item.breed
+    photoImageView.af_setImage(withURL: item.photoUrl)
   }
 }

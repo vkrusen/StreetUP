@@ -332,7 +332,7 @@
         <!--Inventory-->
         <scene sceneID="w0r-xi-h3E">
             <objects>
-                <viewController id="SbM-3D-eUE" customClass="InventoryViewController" customModule="RWPuppies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SbM-3D-eUE" customClass="InventoryViewController" customModule="StreetUP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d8Y-qN-A4I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,7 +341,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InventoryPuppyTableViewCell" rowHeight="159" id="1yo-2d-r0d" customClass="InventoryPuppyTableViewCell" customModule="RWPuppies" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InventoryItemTableViewCell" rowHeight="159" id="1yo-2d-r0d" customClass="InventoryItemTableViewCell" customModule="StreetUP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1yo-2d-r0d" id="62A-YG-XJW">
@@ -432,7 +432,7 @@
         <!--Checkout View Controller-->
         <scene sceneID="6EI-dT-ZG4">
             <objects>
-                <viewController id="s5A-0i-Uie" customClass="CheckoutViewController" customModule="RWPuppies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="s5A-0i-Uie" customClass="CheckoutViewController" customModule="StreetUP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zr9-HR-tAi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -441,7 +441,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="454"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CheckoutPuppyTableViewCell" id="JXN-XQ-DZc" customClass="CheckoutPuppyTableViewCell" customModule="RWPuppies" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CheckoutItemTableViewCell" id="JXN-XQ-DZc" customClass="CheckoutItemTableViewCell" customModule="StreetUP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JXN-XQ-DZc" id="2Ru-J4-MOb">
@@ -475,7 +475,7 @@
                                             <outlet property="priceLabel" destination="VBB-G8-Lbx" id="kaR-Lh-nSB"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CheckoutTotalTableViewCell" id="5rG-zj-QkJ" customClass="CheckoutTotalTableViewCell" customModule="RWPuppies" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CheckoutTotalTableViewCell" id="5rG-zj-QkJ" customClass="CheckoutTotalTableViewCell" customModule="StreetUP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5rG-zj-QkJ" id="zOo-r2-boz">
@@ -551,7 +551,7 @@
         <!--Featured View Controller-->
         <scene sceneID="Jc3-rH-KdK">
             <objects>
-                <viewController id="OCc-qF-bOI" customClass="FeaturedViewController" customModule="RWPuppies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OCc-qF-bOI" customClass="FeaturedViewController" customModule="StreetUP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mdr-vc-23T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -600,7 +600,7 @@
         <!--Detail View Controller-->
         <scene sceneID="Jdk-FA-Fx8">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="TeG-Zf-Vnc" customClass="DetailViewController" customModule="RWPuppies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="TeG-Zf-Vnc" customClass="DetailViewController" customModule="StreetUP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vi8-e6-PTu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -632,7 +632,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="iG0-fH-Lbr">
                                 <rect key="frame" x="20" y="330" width="335" height="150"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0G8-sk-QLJ" customClass="RowView" customModule="RWPuppies" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0G8-sk-QLJ" customClass="RowView" customModule="StreetUP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="49.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZZ-i6-Y2S">
@@ -657,7 +657,7 @@
                                             <constraint firstAttribute="trailing" secondItem="Bmr-Ld-0WD" secondAttribute="trailing" constant="8" id="qqV-mM-aV0"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jth-LK-Kv9" customClass="RowView" customModule="RWPuppies" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jth-LK-Kv9" customClass="RowView" customModule="StreetUP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50.5" width="335" height="49"/>
                                         <subviews>
                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a very long breed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSf-0T-o6G">
@@ -682,7 +682,7 @@
                                             <constraint firstItem="Jrq-WK-yfc" firstAttribute="centerY" secondItem="jth-LK-Kv9" secondAttribute="centerY" id="x3V-vX-ZXc"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhH-Qg-FTj" customClass="RowView" customModule="RWPuppies" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhH-Qg-FTj" customClass="RowView" customModule="StreetUP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="100.5" width="335" height="49.5"/>
                                         <subviews>
                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtI-cd-vWK">
@@ -732,11 +732,11 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="breedLabel" destination="YSf-0T-o6G" id="xUa-rl-ssG"/>
-                        <outlet property="imageActivityIndicator" destination="raY-NS-UOX" id="Zt5-D8-SD2"/>
-                        <outlet property="imageView" destination="D10-Id-wRo" id="7tW-yq-gHk"/>
-                        <outlet property="nameLabel" destination="Bmr-Ld-0WD" id="Kao-z4-Bgk"/>
-                        <outlet property="priceLabel" destination="VtI-cd-vWK" id="A2Z-sW-jXg"/>
+                        <outlet property="breedLabel" destination="YSf-0T-o6G" id="9MT-zH-Kqe"/>
+                        <outlet property="imageActivityIndicator" destination="raY-NS-UOX" id="4pF-kW-HIE"/>
+                        <outlet property="imageView" destination="D10-Id-wRo" id="8RN-4n-W7h"/>
+                        <outlet property="nameLabel" destination="Bmr-Ld-0WD" id="O86-0M-S9B"/>
+                        <outlet property="priceLabel" destination="VtI-cd-vWK" id="FWM-VQ-737"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qN-gw-yNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -764,8 +764,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="list" width="16" height="16"/>
-        <image name="shopping-cart" width="16" height="16"/>
-        <image name="starred" width="16" height="16"/>
+        <image name="list" width="30" height="30"/>
+        <image name="shopping-cart" width="30" height="30"/>
+        <image name="starred" width="30" height="30"/>
     </resources>
 </document>

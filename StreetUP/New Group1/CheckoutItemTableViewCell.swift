@@ -26,23 +26,16 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
+import Foundation
 import UIKit
-import AlamofireImage
 
-class InventoryPuppyTableViewCell: UITableViewCell {
+class CheckoutItemTableViewCell: UITableViewCell {
   
-  override func prepareForReuse() {
-    super.prepareForReuse()
-    photoImageView.af_cancelImageRequest()
-  }
-  
-  @IBOutlet var photoImageView: UIImageView!
   @IBOutlet var nameLabel: UILabel!
-  @IBOutlet var detailLabel: UILabel!
+  @IBOutlet var priceLabel: UILabel!
   
-  func configure(with puppy: Puppy) {
-    nameLabel.text = puppy.name
-    detailLabel.text = puppy.breed
-    photoImageView.af_setImage(withURL: puppy.photoUrl)
+  func configure(with item: Item) {
+    nameLabel.text = item.name
+    priceLabel.text = NumberFormat.format(value: item.price)
   }
 }

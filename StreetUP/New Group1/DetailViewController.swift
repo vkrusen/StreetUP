@@ -31,24 +31,24 @@ import AlamofireImage
 
 class DetailViewController: UIViewController {
   
-  @IBOutlet var imageView: UIImageView!
-  @IBOutlet var nameLabel: UILabel!
-  @IBOutlet var breedLabel: UILabel!
-  @IBOutlet var priceLabel: UILabel!
-  @IBOutlet var imageActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var breedLabel: UILabel!
+    @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var imageActivityIndicator: UIActivityIndicatorView!
   
-  var puppy: Puppy!
+  var item: Item!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    print(puppy)
+    print(item)
     
     imageActivityIndicator.startAnimating()
-    nameLabel.text = puppy.name
-    breedLabel.text = puppy.breed
-    priceLabel.text = NumberFormat.format(value: puppy.price)
-    imageView.af_setImage(withURL: puppy.photoUrl) { [weak self] _ in
+    nameLabel.text = item.name
+    breedLabel.text = item.breed
+    priceLabel.text = NumberFormat.format(value: item.price)
+    imageView.af_setImage(withURL: item.photoUrl) { [weak self] _ in
       guard let strongSelf = self else {
         return
       }
@@ -57,6 +57,6 @@ class DetailViewController: UIViewController {
   }
   
   @IBAction func addToCartDidTap(_ sender: Any) {
-    CheckoutCart.shared.addPuppy(puppy)
+    CheckoutCart.shared.addItem(item)
   }
 }

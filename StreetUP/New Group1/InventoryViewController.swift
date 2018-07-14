@@ -31,7 +31,7 @@ import UIKit
 class InventoryViewController: UIViewController {
   
   private enum CellIdentifiers {
-    static let InventoryPuppyTableViewCell = "InventoryPuppyTableViewCell"
+    static let InventoryItemTableViewCell = "InventoryItemTableViewCell"
   }
   
   private enum StoryboardNames {
@@ -44,14 +44,14 @@ class InventoryViewController: UIViewController {
   
   @IBOutlet var tableView: UITableView!
   
-  private var puppies: [Puppy] = []
+  private var items: [Item] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     title = "Inventory"
     
-    puppies = DataProvider.shared.allPuppies
+    items = DataProvider.shared.allItems
   }
 }
 
@@ -59,12 +59,12 @@ class InventoryViewController: UIViewController {
 extension InventoryViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return puppies.count
+    return items.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.InventoryPuppyTableViewCell, for: indexPath) as! InventoryPuppyTableViewCell
-    cell.configure(with: puppies[indexPath.row])
+    let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.InventoryItemTableViewCell, for: indexPath) as! InventoryItemTableViewCell
+    cell.configure(with: items[indexPath.row])
     return cell
   }
   
@@ -78,7 +78,7 @@ extension InventoryViewController: UITableViewDelegate {
     guard let detailViewController = storyboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.Detail) as? DetailViewController else {
       return
     }
-    detailViewController.puppy = puppies[indexPath.row]
+    detailViewController.item = items[indexPath.row]
     navigationController?.pushViewController(detailViewController, animated: true)
   }
   
