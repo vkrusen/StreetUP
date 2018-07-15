@@ -36,8 +36,18 @@ class DetailViewController: UIViewController {
     @IBOutlet var breedLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
     @IBOutlet var imageActivityIndicator: UIActivityIndicatorView!
-  
-  var item: Item!
+    @IBOutlet var BINButton: UIButton!
+    
+    var item: Item!
+    var buttonStatus = 0
+    
+    private enum StoryboardNames {
+        static let Main = "Main"
+    }
+    
+    private enum ViewControllerIdentifiers {
+        static let Checkout = "CheckoutViewController"
+    }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -58,5 +68,15 @@ class DetailViewController: UIViewController {
   
   @IBAction func addToCartDidTap(_ sender: Any) {
     CheckoutCart.shared.addItem(item)
+    if buttonStatus == 0 {
+        BINButton.setTitle("Betala?", for: .normal)
+        buttonStatus = 1
+    } else {
+        let storyboard = UIStoryboard(name: StoryboardNames.Main, bundle: nil)
+        guard let CheckoutViewController = storyboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.Checkout) as? CheckoutViewController else {
+            return
+        }
+        navigationController?.pushViewController(CheckoutViewController, animated: true)
+    }
   }
 }

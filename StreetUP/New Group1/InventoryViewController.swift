@@ -49,7 +49,7 @@ class InventoryViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = "Inventory"
+    title = "Budgivningar"
     
     items = DataProvider.shared.allItems
   }

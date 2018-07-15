@@ -37,7 +37,7 @@ class FeaturedViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = "Featured Item"
+    title = "Händelser"
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

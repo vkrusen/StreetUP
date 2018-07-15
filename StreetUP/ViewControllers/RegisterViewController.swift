@@ -268,7 +268,7 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
             self.SignIn(completion: { (int) -> () in
                 print("Done! User signed in, should segue to main ViewController now...")
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "ViewControllerId") as! ViewController
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "first")
                 self.present(newViewController, animated: true, completion: nil)
             })
         }

@@ -50,7 +50,7 @@ class CheckoutViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = "Checkout"
+    title = "Utcheckning"
   }
   
   override func viewWillAppear(_ animated: Bool) {
