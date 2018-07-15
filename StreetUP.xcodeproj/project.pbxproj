@@ -121,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				A82A3DB220FAA525003A6DB2 /* Stripe */,
-				A839731320F5562B00D3BC4F /* Fonts */,
 				A839731420F5563A00D3BC4F /* Supporting Files */,
 				A839731520F5565000D3BC4F /* ViewControllers */,
 				A8047CAE1E916AE900DEE309 /* Main.storyboard */,
@@ -132,24 +131,32 @@
 		A82A3DB220FAA525003A6DB2 /* Stripe */ = {
 			isa = PBXGroup;
 			children = (
-				A82A3DB520FAA556003A6DB2 /* CheckoutCart.swift */,
+				A82A3DD220FBA33F003A6DB2 /* Supporting Files */,
 				A82A3DBD20FAA557003A6DB2 /* CheckoutItemTableViewCell.swift */,
 				A82A3DBE20FAA557003A6DB2 /* CheckoutTotalTableViewCell.swift */,
 				A82A3DB920FAA557003A6DB2 /* CheckoutViewController.swift */,
-				A82A3DBF20FAA557003A6DB2 /* Constants.swift */,
-				A82A3DBA20FAA557003A6DB2 /* DataProvider.swift */,
 				A82A3DC020FAA558003A6DB2 /* DetailViewController.swift */,
 				A82A3DB320FAA555003A6DB2 /* FeaturedViewController.swift */,
 				A82A3DB420FAA555003A6DB2 /* InventoryItemTableViewCell.swift */,
 				A82A3DBB20FAA557003A6DB2 /* InventoryViewController.swift */,
+			);
+			name = Stripe;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		A82A3DD220FBA33F003A6DB2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A82A3DB520FAA556003A6DB2 /* CheckoutCart.swift */,
+				A82A3DBF20FAA557003A6DB2 /* Constants.swift */,
+				A82A3DBA20FAA557003A6DB2 /* DataProvider.swift */,
 				A82A3DBC20FAA557003A6DB2 /* NumberFormat.swift */,
 				A82A3DB620FAA556003A6DB2 /* items.json */,
 				A82A3DB820FAA557003A6DB2 /* Item.swift */,
 				A82A3DC120FAA558003A6DB2 /* RowView.swift */,
 				A82A3DB720FAA556003A6DB2 /* StripeClient.swift */,
 			);
-			name = Stripe;
-			path = "New Group1";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		A839731320F5562B00D3BC4F /* Fonts */ = {
@@ -163,6 +170,7 @@
 		A839731420F5563A00D3BC4F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A839731320F5562B00D3BC4F /* Fonts */,
 				A8047CAA1E916AE900DEE309 /* AppDelegate.swift */,
 				A8EFCB5A20F0D434009A5D81 /* BaseViewController.swift */,
 				A839731620F5567700D3BC4F /* Card Supporting Files */,

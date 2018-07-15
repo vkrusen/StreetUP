@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Swipe-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="ViewControllerId" id="BYZ-38-t0r" customClass="ViewController" customModule="StreetUP" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilg-8x-ZBg">
-                                <rect key="frame" x="220" y="585.5" width="115" height="45"/>
+                                <rect key="frame" x="220" y="545.5" width="115" height="45"/>
                                 <color key="backgroundColor" red="1" green="0.47058823529411764" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="115" id="FmW-0l-rSv"/>
@@ -45,7 +45,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYG-dZ-dEH">
-                                <rect key="frame" x="40" y="585.5" width="115" height="45"/>
+                                <rect key="frame" x="40" y="545.5" width="115" height="45"/>
                                 <color key="backgroundColor" red="0.63137254901960782" green="0.94509803921568625" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="115" id="J8B-iz-hlA"/>
@@ -80,16 +80,18 @@
                         <constraints>
                             <constraint firstItem="L42-iT-qMi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="0Qv-VW-viS"/>
                             <constraint firstItem="pD3-t1-RoX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="32" id="5eP-gI-fb8"/>
-                            <constraint firstItem="ilg-8x-ZBg" firstAttribute="top" secondItem="pD3-t1-RoX" secondAttribute="bottom" constant="62.5" id="8Rq-qZ-37T"/>
+                            <constraint firstItem="ilg-8x-ZBg" firstAttribute="top" secondItem="pD3-t1-RoX" secondAttribute="bottom" constant="22.5" id="8Rq-qZ-37T"/>
                             <constraint firstAttribute="trailing" secondItem="ilg-8x-ZBg" secondAttribute="trailing" constant="40" id="D1G-2P-Ivb"/>
                             <constraint firstAttribute="trailing" secondItem="pD3-t1-RoX" secondAttribute="trailing" constant="33" id="DdM-0i-wne"/>
                             <constraint firstItem="pD3-t1-RoX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JtP-gr-rmw"/>
                             <constraint firstItem="L42-iT-qMi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-10" id="N50-hH-bld"/>
                             <constraint firstItem="pD3-t1-RoX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-10.5" id="YER-T7-AFr"/>
-                            <constraint firstItem="AYG-dZ-dEH" firstAttribute="top" secondItem="pD3-t1-RoX" secondAttribute="bottom" constant="62.5" id="Yzk-dv-Ema"/>
+                            <constraint firstItem="AYG-dZ-dEH" firstAttribute="top" secondItem="pD3-t1-RoX" secondAttribute="bottom" constant="22.5" id="Yzk-dv-Ema"/>
                             <constraint firstItem="AYG-dZ-dEH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="aWi-4b-aYf"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Swipe" id="sgX-LQ-it7"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bidButton" destination="AYG-dZ-dEH" id="lnG-il-rKW"/>
                         <outlet property="filterButton" destination="L42-iT-qMi" id="z0L-1C-Z9u"/>
@@ -448,14 +450,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puppy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHr-Td-L4T">
-                                                    <rect key="frame" x="15" y="11" width="52" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHr-Td-L4T">
+                                                    <rect key="frame" x="15" y="11" width="36.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$356.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBB-G8-Lbx">
-                                                    <rect key="frame" x="294" y="11" width="66" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBB-G8-Lbx">
+                                                    <rect key="frame" x="318" y="11" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -741,7 +743,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qN-gw-yNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2000.8" y="-750.22488755622192"/>
+            <point key="canvasLocation" x="2167" y="-742"/>
         </scene>
         <!--Featured-->
         <scene sceneID="Zuy-yq-Bno">

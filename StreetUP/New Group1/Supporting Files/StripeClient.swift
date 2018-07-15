@@ -58,7 +58,7 @@ final class StripeClient {
       "token": token.tokenId,
       "amount": amount,
       "currency": Constants.defaultCurrency,
-      "description": Constants.defaultDescription
+      "description": Constants.defaultDescription //Should be item information later on.
     ]
     // 3
     Alamofire.request(url, method: .post, parameters: params)
