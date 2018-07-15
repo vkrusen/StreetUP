@@ -4,7 +4,7 @@
   "id" : 12252012,
   "name" : "YEEZY 350 V2 Cream White",
   "breed" : "Adidas",
-  "photo_large" : "http://www.raywenderlich.com/downloads/puppies/dachshund.jpeg",
+  "photo_large" : "https://sneakerbardetroit.com/wp-content/uploads/2018/05/adidas-Yeezy-350-V2-Cream-White-Restock.jpg",
   "cuddle_factor" : 5,
   "price" : 350000
   },
@@ -13,7 +13,7 @@
   "id" : 12252013,
   "name" : "YEEZY 350 V2 Oreo",
   "breed" : "Adidas",
-  "photo_large" : "http://www.raywenderlich.com/downloads/puppies/spaniel.jpeg",
+  "photo_large" : "https://images.vinted.net/thumbs/f800/001c9_LC8VWhwGV5NyTE9Xob15cpqE.jpeg?11512650248",
   "price" : 650000
   },
   
@@ -21,8 +21,16 @@
   "id" : 12252014,
   "name" : "YEEZY 350 V2 Butter",
   "breed" : "Adidas",
-  "photo_large" : "http://www.raywenderlich.com/downloads/puppies/chihuahua.jpeg",
+  "photo_large" : "https://cdn.thesolesupplier.co.uk/2018/04/skskkakaksdia.jpg",
   "price" : 380000
+  },
+  
+  {
+  "id" : 12252014,
+  "name" : "YEEZY 350 V2 Zebra",
+  "breed" : "Adidas",
+  "photo_large" : "https://topwearltd.com/wp-content/uploads/2018/02/zebra-adidas-sply-350-yeezy-topwear.jpg",
+  "price" : 480000
   }
   
 ]

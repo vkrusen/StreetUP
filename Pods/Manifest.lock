@@ -39,7 +39,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - AlamofireImage (~> 3.3)
+  - AlamofireImage
   - Firebase/Auth
   - Firebase/Core
   - Koloda
@@ -79,6 +79,6 @@ SPEC CHECKSUMS:
   Stripe: 76c203e21555089b708e6cbe972a3e3baf1ab4d8
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: dbc7820051183d691f6b8f60727e8a4a6b0ef6c9
+PODFILE CHECKSUM: 6141f262d72d569207d50011e9016317e733868a
 
 COCOAPODS: 1.5.2

@@ -12,6 +12,6 @@ target 'StreetUP' do
   pod 'SVProgressHUD'
   pod 'Stripe'
   pod 'Alamofire'
-  pod 'AlamofireImage', '~> 3.3'
+  pod 'AlamofireImage'
 
 end
