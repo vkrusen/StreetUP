@@ -105,6 +105,16 @@ class DetailViewController: BaseViewController {
         view.layer.cornerRadius = 7
     }
   
+    @IBAction func purchaseAction(_ sender: Any) {
+        CheckoutCart.shared.addItem(item)
+        /*let storyboard = UIStoryboard(name: StoryboardNames.Main, bundle: nil)
+        guard let CheckoutViewController = storyboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.Checkout) as? CheckoutViewController else {
+            return
+        }
+        navigationController?.pushViewController(CheckoutViewController, animated: true)*/
+    }
+    
     @IBAction func dismiss(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
 }

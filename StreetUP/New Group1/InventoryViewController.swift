@@ -28,10 +28,12 @@
 
 import UIKit
 
-class InventoryViewController: UIViewController {
+class InventoryViewController: BaseViewController {
   
-  private enum CellIdentifiers {
-    static let InventoryItemTableViewCell = "InventoryItemTableViewCell"
+    @IBOutlet var sellButton: UIButton!
+    
+    private enum CellIdentifiers {
+    static let InventoryItemCell = "InventoryItemCell"
   }
   
   private enum StoryboardNames {
@@ -42,44 +44,56 @@ class InventoryViewController: UIViewController {
     static let Detail = "DetailViewController"
   }
   
-  @IBOutlet var tableView: UITableView!
+    @IBOutlet var collectionView: UICollectionView!
   
   private var items: [Item] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = "Budgivningar"
+    title = "Feed"
     
     items = DataProvider.shared.allItems
+    
+    setupGradient(item: sellButton, colors: [hexStringToUIColorWithAlpha(hex: "87D300", alpha: 1.0), hexStringToUIColorWithAlpha(hex: "35BA00", alpha: 1.0)], alpha: [1.0], locations: [0.0, 1.0], roundedCorners: true, cornerRadius: 7)
+    setupShadow(UIItem: sellButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "3FBD06")
+    sellButton.layer.cornerRadius = 7
   }
-}
-
-// MARK: - UITableViewDataSource
-extension InventoryViewController: UITableViewDataSource {
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return items.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.InventoryItemTableViewCell, for: indexPath) as! InventoryItemTableViewCell
-    cell.configure(with: items[indexPath.row])
-    return cell
-  }
-  
-}
-
-// MARK: - UITableViewDelegate
-extension InventoryViewController: UITableViewDelegate {
-  
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let storyboard = UIStoryboard(name: StoryboardNames.Main, bundle: nil)
-    guard let detailViewController = storyboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.Detail) as? DetailViewController else {
-      return
+    
+    @IBAction func sellAction(_ sender: Any) {
     }
-    detailViewController.item = items[indexPath.row]
-    navigationController?.pushViewController(detailViewController, animated: true)
-  }
+}
+
+// MARK: - UICollectionViewDataSource
+extension InventoryViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.InventoryItemCell, for: indexPath) as! InventoryItemCell
+            cell.configure(with: items[indexPath.row])
+        
+            cell.layer.borderColor = hexStringToUIColor(hex: "E2E2E2").cgColor
+            cell.layer.borderWidth = 1
+            cell.layer.cornerRadius = 10
+        
+        return cell
+    }
+    
+}
+
+// MARK: - UICollectionViewDelegate
+extension InventoryViewController: UICollectionViewDelegate {
+  
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: StoryboardNames.Main, bundle: nil)
+        guard let detailViewController = storyboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.Detail) as? DetailViewController else {
+            return
+        }
+        detailViewController.item = items[indexPath.row]
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
   
 }

@@ -29,20 +29,20 @@
 import UIKit
 import AlamofireImage
 
-class InventoryItemTableViewCell: UITableViewCell {
+class InventoryItemCell: UICollectionViewCell {
   
   override func prepareForReuse() {
     super.prepareForReuse()
     photoImageView.af_cancelImageRequest()
   }
-  
-  @IBOutlet var photoImageView: UIImageView!
-  @IBOutlet var nameLabel: UILabel!
-  @IBOutlet var detailLabel: UILabel!
+    
+    @IBOutlet var photoImageView: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var detailLabel: UILabel!
   
   func configure(with item: Item) {
     nameLabel.text = item.name
-    detailLabel.text = item.breed
+    detailLabel.text = "\(NumberFormat.format(value: item.price))"
     photoImageView.af_setImage(withURL: item.photoUrl)
   }
 }

@@ -12,7 +12,7 @@
 		A8047CB01E916AE900DEE309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8047CAE1E916AE900DEE309 /* Main.storyboard */; };
 		A8047CB21E916AE900DEE309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8047CB11E916AE900DEE309 /* Assets.xcassets */; };
 		A82A3DC220FAA558003A6DB2 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DB320FAA555003A6DB2 /* FeaturedViewController.swift */; };
-		A82A3DC320FAA558003A6DB2 /* InventoryItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DB420FAA555003A6DB2 /* InventoryItemTableViewCell.swift */; };
+		A82A3DC320FAA558003A6DB2 /* InventoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DB420FAA555003A6DB2 /* InventoryItemCell.swift */; };
 		A82A3DC420FAA558003A6DB2 /* CheckoutCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DB520FAA556003A6DB2 /* CheckoutCart.swift */; };
 		A82A3DC520FAA558003A6DB2 /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = A82A3DB620FAA556003A6DB2 /* items.json */; };
 		A82A3DC620FAA558003A6DB2 /* StripeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DB720FAA556003A6DB2 /* StripeClient.swift */; };
@@ -51,7 +51,7 @@
 		A8047CB11E916AE900DEE309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8047CB61E916AE900DEE309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A82A3DB320FAA555003A6DB2 /* FeaturedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
-		A82A3DB420FAA555003A6DB2 /* InventoryItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryItemTableViewCell.swift; sourceTree = "<group>"; };
+		A82A3DB420FAA555003A6DB2 /* InventoryItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryItemCell.swift; sourceTree = "<group>"; };
 		A82A3DB520FAA556003A6DB2 /* CheckoutCart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutCart.swift; sourceTree = "<group>"; };
 		A82A3DB620FAA556003A6DB2 /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
 		A82A3DB720FAA556003A6DB2 /* StripeClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripeClient.swift; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 				A8712637212B622700ED8840 /* PurchaseSuccessfulViewController.swift */,
 				A82A3DC020FAA558003A6DB2 /* DetailViewController.swift */,
 				A82A3DB320FAA555003A6DB2 /* FeaturedViewController.swift */,
-				A82A3DB420FAA555003A6DB2 /* InventoryItemTableViewCell.swift */,
+				A82A3DB420FAA555003A6DB2 /* InventoryItemCell.swift */,
 				A82A3DBB20FAA557003A6DB2 /* InventoryViewController.swift */,
 			);
 			name = Stripe;
@@ -380,7 +380,7 @@
 				A8712636212B608000ED8840 /* ShippingViewController.swift in Sources */,
 				A8EFCB4D20EFE53D009A5D81 /* CardView.swift in Sources */,
 				A82A3DCA20FAA558003A6DB2 /* InventoryViewController.swift in Sources */,
-				A82A3DC320FAA558003A6DB2 /* InventoryItemTableViewCell.swift in Sources */,
+				A82A3DC320FAA558003A6DB2 /* InventoryItemCell.swift in Sources */,
 				A8EFCB4F20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift in Sources */,
 				A82A3DC420FAA558003A6DB2 /* CheckoutCart.swift in Sources */,
 				A82A3DC920FAA558003A6DB2 /* DataProvider.swift in Sources */,

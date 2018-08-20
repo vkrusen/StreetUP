@@ -37,6 +37,7 @@ class ShippingViewController: BaseViewController {
     }
     
     @IBAction func dismiss(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     // Factory
