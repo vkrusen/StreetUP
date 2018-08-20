@@ -28,6 +28,8 @@
 		A82A3DD020FAA558003A6DB2 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A3DC120FAA558003A6DB2 /* RowView.swift */; };
 		A83CAA0020F3ED990015469E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83CA9FF20F3ED990015469E /* RegisterViewController.swift */; };
 		A8712634212B0C5700ED8840 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8712633212B0C5700ED8840 /* CardViewController.swift */; };
+		A8712636212B608000ED8840 /* ShippingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8712635212B608000ED8840 /* ShippingViewController.swift */; };
+		A8712638212B622700ED8840 /* PurchaseSuccessfulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8712637212B622700ED8840 /* PurchaseSuccessfulViewController.swift */; };
 		A8EFCB4820EFDB5C009A5D81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8EFCB4720EFDB5C009A5D81 /* LaunchScreen.storyboard */; };
 		A8EFCB4D20EFE53D009A5D81 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EFCB4C20EFE53D009A5D81 /* CardView.swift */; };
 		A8EFCB4F20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EFCB4E20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift */; };
@@ -66,6 +68,8 @@
 		A83CA9FE20F3E8E40015469E /* StreetUP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StreetUP.entitlements; sourceTree = "<group>"; };
 		A83CA9FF20F3ED990015469E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A8712633212B0C5700ED8840 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		A8712635212B608000ED8840 /* ShippingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingViewController.swift; sourceTree = "<group>"; };
+		A8712637212B622700ED8840 /* PurchaseSuccessfulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSuccessfulViewController.swift; sourceTree = "<group>"; };
 		A8EFCB4720EFDB5C009A5D81 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8EFCB4C20EFE53D009A5D81 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A8EFCB4E20EFE6B7009A5D81 /* BackgroundKolodaAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundKolodaAnimator.swift; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 				A82A3DBE20FAA557003A6DB2 /* CheckoutTotalTableViewCell.swift */,
 				A82A3DB920FAA557003A6DB2 /* CheckoutViewController.swift */,
 				A8712633212B0C5700ED8840 /* CardViewController.swift */,
+				A8712635212B608000ED8840 /* ShippingViewController.swift */,
+				A8712637212B622700ED8840 /* PurchaseSuccessfulViewController.swift */,
 				A82A3DC020FAA558003A6DB2 /* DetailViewController.swift */,
 				A82A3DB320FAA555003A6DB2 /* FeaturedViewController.swift */,
 				A82A3DB420FAA555003A6DB2 /* InventoryItemTableViewCell.swift */,
@@ -370,6 +376,8 @@
 				A8712634212B0C5700ED8840 /* CardViewController.swift in Sources */,
 				A83CAA0020F3ED990015469E /* RegisterViewController.swift in Sources */,
 				A82A3DC720FAA558003A6DB2 /* Item.swift in Sources */,
+				A8712638212B622700ED8840 /* PurchaseSuccessfulViewController.swift in Sources */,
+				A8712636212B608000ED8840 /* ShippingViewController.swift in Sources */,
 				A8EFCB4D20EFE53D009A5D81 /* CardView.swift in Sources */,
 				A82A3DCA20FAA558003A6DB2 /* InventoryViewController.swift in Sources */,
 				A82A3DC320FAA558003A6DB2 /* InventoryItemTableViewCell.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  CardViewController.swift
+//  ShippingViewController.swift
 //  StreetUP
 //
 //  Created by Victor Krusenstråhle on 2018-08-20.
@@ -9,36 +9,20 @@
 import UIKit
 import Stripe
 
-class CustomTextField: UITextField {
+class ShippingViewController: BaseViewController {
     
-    let padding = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
-    
-    override open func textRect(forBounds bounds: CGRect) -> CGRect {
-        return UIEdgeInsetsInsetRect(bounds, padding)
-    }
-    
-    override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-        return UIEdgeInsetsInsetRect(bounds, padding)
-    }
-    
-    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
-        return UIEdgeInsetsInsetRect(bounds, padding)
-    }
-}
-
-class CardViewController: BaseViewController {
-    
-    @IBOutlet var cardNumberTextField: CustomTextField!
-    @IBOutlet var MonthYearTextField: CustomTextField!
-    @IBOutlet var CVCTextField: CustomTextField!
+    @IBOutlet var streedTextfield: CustomTextField!
+    @IBOutlet var postalcodeTextfield: CustomTextField!
+    @IBOutlet var cityTextfield: CustomTextField!
     @IBOutlet var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Betalnings metod"
-        styleTextfield(textField: cardNumberTextField, label: "Kortnummer")
-        styleTextfield(textField: MonthYearTextField, label: "MM/YY")
-        styleTextfield(textField: CVCTextField, label: "CVC")
+        title = "Frakt detajler"
+        
+        styleTextfield(textField: streedTextfield, label: "Gata och husnummer")
+        styleTextfield(textField: postalcodeTextfield, label: "Postnummer")
+        styleTextfield(textField: cityTextfield, label: "Ort")
         
         setupGradient(item: nextButton, colors: [hexStringToUIColorWithAlpha(hex: "D0D1D0", alpha: 1.0), hexStringToUIColorWithAlpha(hex: "B1B3B0", alpha: 1.0)], alpha: [1.0], locations: [0.0    ,1.0], roundedCorners: true, cornerRadius: 7)
         setupShadow(UIItem: nextButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "B1B3B0")
