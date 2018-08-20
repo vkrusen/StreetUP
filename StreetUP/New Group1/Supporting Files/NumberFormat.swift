@@ -30,15 +30,13 @@ import Foundation
 
 final class NumberFormat {
   
-
-  
   private static let shared = NumberFormat()
   
   private lazy var formatter: NumberFormatter = {
     let formatter = NumberFormatter()
-    formatter.maximumFractionDigits = 2
+    formatter.maximumFractionDigits = 0
     formatter.numberStyle = .currency
-    formatter.currencyCode = Constants.defaultCurrency
+    formatter.locale = Locale(identifier: "sv-SE")
     return formatter
   }()
   

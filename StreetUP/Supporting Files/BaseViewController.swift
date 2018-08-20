@@ -404,7 +404,7 @@ class BaseViewController: UIViewController {
         label.attributedText = attrString
     }
     
-    func setupGradient(item: AnyObject, colors: [UIColor], alpha: [CGFloat], locations: [NSNumber], roundedCorners: Bool) -> Void {
+    func setupGradient(item: AnyObject, colors: [UIColor], alpha: [CGFloat], locations: [NSNumber], roundedCorners: Bool, cornerRadius: Int) -> Void {
         let gradient: CAGradientLayer = CAGradientLayer()
         gradient.frame = item.bounds
         gradient.colors = colors.map { $0.cgColor }
@@ -413,7 +413,7 @@ class BaseViewController: UIViewController {
         gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
         
         if roundedCorners == true {
-            gradient.cornerRadius = item.bounds.height / 2
+            gradient.cornerRadius = CGFloat(cornerRadius) //item.bounds.height / 2
         } else {
             
         }

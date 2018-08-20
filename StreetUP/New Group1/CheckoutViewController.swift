@@ -29,28 +29,36 @@
 import UIKit
 import Stripe
 
-class CheckoutViewController: UIViewController {
+class CheckoutViewController: BaseViewController {
 
+  let cellSpacingHeight: CGFloat = 20
+    
   private enum Section: Int {
     case items = 0
-    case total
     
     static func cellIdentifier(for section: Section) -> String {
       switch section {
       case .items:
         return "CheckoutItemTableViewCell"
-      case .total:
-        return "CheckoutTotalTableViewCell"
+      /*case .total:
+        return "CheckoutTotalTableViewCell"*/
       }
     }
   }
 
   @IBOutlet var tableView: UITableView!
-  
+    @IBOutlet var totalLabel: UILabel!
+    @IBOutlet var checkoutButton: UIButton!
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     
     title = "Utcheckning"
+    totalLabel.text = "0 kr"
+    
+    setupGradient(item: checkoutButton, colors: [hexStringToUIColorWithAlpha(hex: "87D300", alpha: 1.0), hexStringToUIColorWithAlpha(hex: "35BA00", alpha: 1.0)], alpha: [1.0], locations: [0.0    ,1.0], roundedCorners: true, cornerRadius: 7)
+    setupShadow(UIItem: checkoutButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "3FBD06")
+    checkoutButton.layer.cornerRadius = 7
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -107,14 +115,14 @@ extension CheckoutViewController: STPAddCardViewControllerDelegate {
 extension CheckoutViewController: UITableViewDataSource {
 
   func numberOfSections(in tableView: UITableView) -> Int {
-    return 2
+    return 1
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if section == Section.items.rawValue {
       return CheckoutCart.shared.cart.count
     } else {
-      return 1
+      return 0
     }
   }
 
@@ -128,9 +136,15 @@ extension CheckoutViewController: UITableViewDataSource {
     case let cell as CheckoutItemTableViewCell:
       let item = CheckoutCart.shared.cart[indexPath.row]
       cell.configure(with: item)
-    case let cell as CheckoutTotalTableViewCell:
+      
+      cell.layer.cornerRadius = 10
+      cell.layer.masksToBounds = true
+      
       let total = CheckoutCart.shared.total
-      cell.configure(with: total)
+      totalLabel.text = "\(NumberFormat.format(value: total))"
+    /*case let cell as CheckoutTotalTableViewCell:
+      let total = CheckoutCart.shared.total
+      cell.configure(with: total)*/
     default:
       fatalError("Cell does not match the correct type")
     }

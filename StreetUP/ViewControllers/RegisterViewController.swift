@@ -46,7 +46,7 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
         roundedCorners()
         
         hideshowDigitTextfields(ishidden: true)
-        setupGradient(item: numberTextField, colors: [hexStringToUIColorWithAlpha(hex: "87D300", alpha: 1.0), hexStringToUIColorWithAlpha(hex: "35BA00", alpha: 1.0)], alpha: [1.0], locations: [0.0    ,1.0], roundedCorners: true)
+        setupGradient(item: numberTextField, colors: [hexStringToUIColorWithAlpha(hex: "87D300", alpha: 1.0), hexStringToUIColorWithAlpha(hex: "35BA00", alpha: 1.0)], alpha: [1.0], locations: [0.0    ,1.0], roundedCorners: true, cornerRadius: Int(numberTextField.bounds.height / 2))
         setupShadow(UIItem: numberTextField, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "3FBD06")
         numberTextField.attributedPlaceholder = NSAttributedString(string: "(+46) xx-xxx xx xx", attributes:[NSAttributedStringKey.foregroundColor: hexStringToUIColor(hex: "FFFFFF")])
         
