@@ -52,6 +52,8 @@ class ViewController: BaseViewController {
     @IBOutlet var filterButton: UIButton!
     @IBOutlet var skipButton: UIButton!
     
+    private var items: [Item] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("View OPEN")
@@ -86,6 +88,7 @@ class ViewController: BaseViewController {
     }
     
     func append() {
+        
         self.posts.append(Post(name: "username", image: #imageLiteral(resourceName: "image4"), price: 5800, currency: "kr", title: "NMD Human Race OG", postID: "id", media_url: "media_url"))
         self.posts.append(Post(name: "username", image: #imageLiteral(resourceName: "image"), price: 5499, currency: "kr", title: "Supreme Bogo Pink", postID: "id", media_url: "media_url"))
         self.posts.append(Post(name: "username", image: #imageLiteral(resourceName: "image2"), price: 899, currency: "kr", title: "Bape Tee", postID: "id", media_url: "media_url"))
