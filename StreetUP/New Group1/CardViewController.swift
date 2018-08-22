@@ -28,6 +28,7 @@ class CustomTextField: UITextField {
 
 class CardViewController: BaseViewController {
     
+    @IBOutlet var cardNameTextField: CustomTextField!
     @IBOutlet var cardNumberTextField: CustomTextField!
     @IBOutlet var MonthYearTextField: CustomTextField!
     @IBOutlet var CVCTextField: CustomTextField!

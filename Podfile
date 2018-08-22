@@ -13,5 +13,6 @@ target 'StreetUP' do
   pod 'Stripe'
   pod 'Alamofire'
   pod 'AlamofireImage'
+  pod 'WASHD'
 
 end
