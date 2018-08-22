@@ -44,7 +44,6 @@ class CardViewController: BaseViewController, UITextFieldDelegate {
         styleTextfield(textField: MonthYearTextField, label: "Utgångsdatum (MM/YY)")
         styleTextfield(textField: CVCTextField, label: "CVC")
         
-        setupGradient(item: nextButton, colors: [hexStringToUIColorWithAlpha(hex: "D0D1D0", alpha: 1.0), hexStringToUIColorWithAlpha(hex: "B1B3B0", alpha: 1.0)], alpha: [1.0], locations: [0.0    ,1.0], roundedCorners: true, cornerRadius: 7)
         setupShadow(UIItem: nextButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "B1B3B0")
         nextButton.layer.cornerRadius = 7
         
@@ -52,6 +51,17 @@ class CardViewController: BaseViewController, UITextFieldDelegate {
     }
     
     // TextField formatting
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if cardNameTextField.text == "" || cardNumberTextField.text == "" || MonthYearTextField.text == "" || CVCTextField.text == "" {
+             nextButton.isEnabled = false
+        } else {
+            setupGradient(item: nextButton, colors: [hexStringToUIColorWithAlpha(hex: "87D300", alpha: 1.0), hexStringToUIColorWithAlpha(hex: "35BA00", alpha: 1.0)], alpha: [1.0], locations: [0.0    ,1.0], roundedCorners: true, cornerRadius: 7)
+            setupShadow(UIItem: nextButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "3FBD06")
+            nextButton.layer.cornerRadius = 7
+            nextButton.isEnabled = true
+        }
+    }
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }

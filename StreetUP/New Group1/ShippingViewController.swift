@@ -9,7 +9,7 @@
 import UIKit
 import Stripe
 
-class ShippingViewController: BaseViewController {
+class ShippingViewController: BaseViewController, UITextFieldDelegate {
     
     @IBOutlet var streedTextfield: CustomTextField!
     @IBOutlet var postalcodeTextfield: CustomTextField!
@@ -24,16 +24,29 @@ class ShippingViewController: BaseViewController {
         styleTextfield(textField: postalcodeTextfield, label: "Postnummer")
         styleTextfield(textField: cityTextfield, label: "Ort")
         
-        setupGradient(item: nextButton, colors: [hexStringToUIColorWithAlpha(hex: "D0D1D0", alpha: 1.0), hexStringToUIColorWithAlpha(hex: "B1B3B0", alpha: 1.0)], alpha: [1.0], locations: [0.0    ,1.0], roundedCorners: true, cornerRadius: 7)
         setupShadow(UIItem: nextButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "B1B3B0")
         nextButton.layer.cornerRadius = 7
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if streedTextfield.text == "" || postalcodeTextfield.text == "" || cityTextfield.text == "" {
+             nextButton.isEnabled = false
+        } else {
+            setupGradient(item: nextButton, colors: [hexStringToUIColorWithAlpha(hex: "87D300", alpha: 1.0), hexStringToUIColorWithAlpha(hex: "35BA00", alpha: 1.0)], alpha: [1.0], locations: [0.0    ,1.0], roundedCorners: true, cornerRadius: 7)
+            setupShadow(UIItem: nextButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "3FBD06")
+            nextButton.layer.cornerRadius = 7
+            nextButton.isEnabled = true
+        }
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
-        // The following should happen when everything is verified
-        setupGradient(item: nextButton, colors: [hexStringToUIColorWithAlpha(hex: "87D300", alpha: 1.0), hexStringToUIColorWithAlpha(hex: "35BA00", alpha: 1.0)], alpha: [1.0], locations: [0.0    ,1.0], roundedCorners: true, cornerRadius: 7)
-        setupShadow(UIItem: nextButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "3FBD06")
-        nextButton.layer.cornerRadius = 7
     }
     
     @IBAction func dismiss(_ sender: Any) {
