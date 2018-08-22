@@ -143,6 +143,7 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate {
     @IBAction func doneAction(_ sender: Any) {
         UserDefaults.standard.set(numberTextField.text!, forKey: "number")
         dismissKeyboard()
+        SVProgressHUD.setDefaultMaskType(.black)
         SVProgressHUD.show(withStatus: "Verifierar mobilnummer")
         self.numberTextField.isUserInteractionEnabled = false
         self.doneButton.isUserInteractionEnabled = false

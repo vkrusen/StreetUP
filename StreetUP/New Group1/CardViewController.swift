@@ -9,6 +9,7 @@
 import UIKit
 import Stripe
 import FormTextField
+import SVProgressHUD
 
 class CustomTextField: UITextField {
     
@@ -138,6 +139,9 @@ class CardViewController: BaseViewController, UITextFieldDelegate {
         setupShadow(UIItem: nextButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "3FBD06")
         nextButton.layer.cornerRadius = 7
         
+        SVProgressHUD.setDefaultMaskType(.black)
+        SVProgressHUD.show(withStatus: "Kontrollerar kort")
+        
         stripe()
     }
     
@@ -148,17 +152,18 @@ class CardViewController: BaseViewController, UITextFieldDelegate {
     // Stripe
     func stripe() {
         let cardParams = STPCardParams()
-            cardParams.name = cardNameTextField.text //"Victor Krusenstråhle"
-            cardParams.number = cardNumberTextField.text //"4242424242424242"
-            cardParams.expMonth = 12
-            cardParams.expYear = 2018
-            cardParams.cvc = CVCTextField.text //"123"
+            cardParams.name = cardNameTextField.text
+            cardParams.number = cardNumberTextField.text
+            cardParams.expMonth = 12 // Will be provided by textfield
+            cardParams.expYear = 2018 // Will be provided by textfield
+            cardParams.cvc = CVCTextField.text
         
         
         
         STPAPIClient.shared().createToken(withCard: cardParams) { (token: STPToken?, error: Error?) in
             guard let token = token, error == nil else {
                 // Present error to user...
+                SVProgressHUD.showError(withStatus: "Något gick snett, kontrollera att allt stämmer.")
                 return
             }
             
@@ -167,19 +172,16 @@ class CardViewController: BaseViewController, UITextFieldDelegate {
                 switch result {
                 // 1
                 case .success:
+                    SVProgressHUD.showSuccess(withStatus: "Din betalning är bekräftad!")
                     
-                    let alertController = UIAlertController(title: "Congrats", message: "Your payment was successful!", preferredStyle: .alert)
-                    let alertAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
-                        // Do this when user clicked "OK"- button
-                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "PurchaseSuccessfulViewControllerId") as! PurchaseSuccessfulViewController
-                        self.present(newViewController, animated: true, completion: nil)
-                    })
-                    alertController.addAction(alertAction)
-                    self.present(alertController, animated: true)
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "PurchaseSuccessfulViewControllerId") as! PurchaseSuccessfulViewController
+                    self.present(newViewController, animated: true, completion: nil)
+                    
                 // 2
                 case .failure(let error):
                     print(error)
+                    SVProgressHUD.showError(withStatus: "\(error)")
                 }
             }
         }
