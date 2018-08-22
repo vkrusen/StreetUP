@@ -646,7 +646,7 @@
                                 <color key="textColor" red="0.25490196079999999" green="0.74509803919999995" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kortnummer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XKF-9E-eaX" customClass="CustomTextField" customModule="StreetUP" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kortnummer" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XKF-9E-eaX" customClass="FormTextField" customModule="FormTextField">
                                 <rect key="frame" x="45" y="405" width="285" height="40"/>
                                 <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -655,9 +655,12 @@
                                 </constraints>
                                 <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="cc-number"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="27P-dQ-hcR" id="QWP-na-aaW"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MM/YY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KdI-YT-lQO" customClass="CustomTextField" customModule="StreetUP" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MM/YY" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KdI-YT-lQO" customClass="FormTextField" customModule="FormTextField">
                                 <rect key="frame" x="45" y="465" width="285" height="40"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -666,9 +669,12 @@
                                 </constraints>
                                 <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="cc-number"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="27P-dQ-hcR" id="AcZ-wI-gEV"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CVC" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bGB-xO-DQD" customClass="CustomTextField" customModule="StreetUP" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CVC" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bGB-xO-DQD" customClass="FormTextField" customModule="FormTextField">
                                 <rect key="frame" x="45" y="525" width="285" height="40"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -677,7 +683,10 @@
                                 </constraints>
                                 <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="cc-number"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="27P-dQ-hcR" id="GLx-ek-Qyu"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIk-6L-J5A">
                                 <rect key="frame" x="112" y="565" width="150" height="45"/>
@@ -693,7 +702,7 @@
                                     <action selector="nextButtonAction:" destination="27P-dQ-hcR" eventType="touchUpInside" id="TCV-e7-RAI"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Namn på kort" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GfY-PP-2ok" customClass="CustomTextField" customModule="StreetUP" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Namn på kort" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GfY-PP-2ok" customClass="FormTextField" customModule="FormTextField">
                                 <rect key="frame" x="45" y="345" width="285" height="40"/>
                                 <color key="backgroundColor" red="0.96912556886672974" green="0.96985918283462524" blue="0.96923929452896118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -703,6 +712,9 @@
                                 <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <connections>
+                                    <outlet property="delegate" destination="27P-dQ-hcR" id="kA4-tu-d1h"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -734,10 +746,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="CVCTextField" destination="bGB-xO-DQD" id="rEP-iD-wTf"/>
-                        <outlet property="MonthYearTextField" destination="KdI-YT-lQO" id="W7W-4x-idC"/>
-                        <outlet property="cardNameTextField" destination="GfY-PP-2ok" id="DZE-yP-hca"/>
-                        <outlet property="cardNumberTextField" destination="XKF-9E-eaX" id="Eyj-AI-jWh"/>
+                        <outlet property="CVCTextField" destination="bGB-xO-DQD" id="8av-u3-fpV"/>
+                        <outlet property="MonthYearTextField" destination="KdI-YT-lQO" id="JlF-jr-XFB"/>
+                        <outlet property="cardNameTextField" destination="GfY-PP-2ok" id="9FA-1c-vMN"/>
+                        <outlet property="cardNumberTextField" destination="XKF-9E-eaX" id="d77-JJ-rhG"/>
                         <outlet property="nextButton" destination="kIk-6L-J5A" id="U5O-IV-jNc"/>
                     </connections>
                 </viewController>

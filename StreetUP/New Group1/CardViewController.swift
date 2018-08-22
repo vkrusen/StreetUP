@@ -8,6 +8,7 @@
 
 import UIKit
 import Stripe
+import FormTextField
 
 class CustomTextField: UITextField {
     
@@ -26,25 +27,110 @@ class CustomTextField: UITextField {
     }
 }
 
-class CardViewController: BaseViewController {
+class CardViewController: BaseViewController, UITextFieldDelegate {
     
-    @IBOutlet var cardNameTextField: CustomTextField!
-    @IBOutlet var cardNumberTextField: CustomTextField!
-    @IBOutlet var MonthYearTextField: CustomTextField!
-    @IBOutlet var CVCTextField: CustomTextField!
+    @IBOutlet var cardNameTextField: FormTextField!
+    @IBOutlet var cardNumberTextField: FormTextField!
+    @IBOutlet var MonthYearTextField: FormTextField!
+    @IBOutlet var CVCTextField: FormTextField!
     @IBOutlet var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Betalnings metod"
+        styleTextfield(textField: cardNameTextField, label: "Namn på kort")
         styleTextfield(textField: cardNumberTextField, label: "Kortnummer")
-        styleTextfield(textField: MonthYearTextField, label: "MM/YY")
+        styleTextfield(textField: MonthYearTextField, label: "Utgångsdatum (MM/YY)")
         styleTextfield(textField: CVCTextField, label: "CVC")
         
         setupGradient(item: nextButton, colors: [hexStringToUIColorWithAlpha(hex: "D0D1D0", alpha: 1.0), hexStringToUIColorWithAlpha(hex: "B1B3B0", alpha: 1.0)], alpha: [1.0], locations: [0.0    ,1.0], roundedCorners: true, cornerRadius: 7)
         setupShadow(UIItem: nextButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "B1B3B0")
         nextButton.layer.cornerRadius = 7
+        
+        setupTextFields()
     }
+    
+    // TextField formatting
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == cardNumberTextField {
+            let maxLength = 19
+            let currentString: NSString = textField.text! as NSString
+            let newString: NSString =
+                currentString.replacingCharacters(in: range, with: string) as NSString
+            return newString.length <= maxLength
+        } else if textField == MonthYearTextField {
+            let maxLength = 5
+            let currentString: NSString = textField.text! as NSString
+            let newString: NSString =
+                currentString.replacingCharacters(in: range, with: string) as NSString
+            return newString.length <= maxLength
+        } else if textField == CVCTextField {
+            let maxLength = 3
+            let currentString: NSString = textField.text! as NSString
+            let newString: NSString =
+                currentString.replacingCharacters(in: range, with: string) as NSString
+            return newString.length <= maxLength
+        } else {
+           return true
+        }
+    }
+    
+    func setupTextFields() {
+        setupNumberTextField()
+        setupMonthYearTextField()
+        setupCVCTextField()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func setupNumberTextField() {
+        // CardNumber
+        cardNumberTextField.inputType = .integer
+        cardNumberTextField.formatter = CardNumberFormatter()
+        cardNumberTextField.placeholder = "Kortnummer"
+        
+        var validation = Validation()
+        validation.maximumLength = "1234 1234 1234 1234".count
+        validation.minimumLength = "1234 1234 1234 1234".count
+        let characterSet = NSMutableCharacterSet.decimalDigit()
+            characterSet.addCharacters(in: " ")
+            validation.characterSet = characterSet as CharacterSet
+        let inputValidator = InputValidator(validation: validation)
+        cardNumberTextField.inputValidator = inputValidator
+    }
+    
+    func setupMonthYearTextField() {
+        // MM/YY
+        MonthYearTextField.inputType = .integer
+        MonthYearTextField.formatter = CardExpirationDateFormatter()
+        MonthYearTextField.placeholder = "Utgångsdatum (MM/YY)"
+        
+        var validation = Validation()
+        validation.maximumLength = "MM/YY".count
+        validation.minimumLength = "MM/YY".count
+        let inputValidator = CardExpirationDateInputValidator(validation: validation)
+        MonthYearTextField.inputValidator = inputValidator
+    }
+    
+    func setupCVCTextField() {
+        // CVC
+        CVCTextField.inputType = .integer
+        CVCTextField.placeholder = "CVC"
+        
+        var validation = Validation()
+        validation.maximumLength = "CVC".count
+        validation.minimumLength = "CVC".count
+        validation.characterSet = NSCharacterSet.decimalDigits
+        let inputValidator = InputValidator(validation: validation)
+        CVCTextField.inputValidator = inputValidator
+    }
+    
+    // Other
     
     @IBAction func nextButtonAction(_ sender: Any) {
         // The following should happen when everything is verified
@@ -62,11 +148,11 @@ class CardViewController: BaseViewController {
     // Stripe
     func stripe() {
         let cardParams = STPCardParams()
-            cardParams.name = "Victor Krusenstråhle" // Should be provided by textfield
-            cardParams.number = "4242424242424242" // Should be provided by textfield
-            cardParams.expMonth = 12 // Should be provided by textfield
-            cardParams.expYear = 2018 // Should be provided by textfield
-            cardParams.cvc = "123" // Should be provided by textfield
+            cardParams.name = cardNameTextField.text //"Victor Krusenstråhle"
+            cardParams.number = cardNumberTextField.text //"4242424242424242"
+            cardParams.expMonth = 12
+            cardParams.expYear = 2018
+            cardParams.cvc = CVCTextField.text //"123"
         
         
         

@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "FormTextField.h"
 
-FOUNDATION_EXPORT double WASHDVersionNumber;
-FOUNDATION_EXPORT const unsigned char WASHDVersionString[];
+FOUNDATION_EXPORT double FormTextFieldVersionNumber;
+FOUNDATION_EXPORT const unsigned char FormTextFieldVersionString[];
 

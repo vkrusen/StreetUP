@@ -22,6 +22,7 @@ PODS:
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
   - FirebaseInstanceID (3.1.1):
     - FirebaseCore (~> 5.0)
+  - FormTextField (2.0.1)
   - GoogleToolboxForMac/Defines (2.1.4)
   - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
     - GoogleToolboxForMac/Defines (= 2.1.4)
@@ -36,17 +37,16 @@ PODS:
   - pop (1.0.10)
   - Stripe (13.0.3)
   - SVProgressHUD (2.2.5)
-  - WASHD (0.1.4)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
   - Firebase/Auth
   - Firebase/Core
+  - FormTextField
   - Koloda
   - Stripe
   - SVProgressHUD
-  - WASHD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -57,6 +57,7 @@ SPEC REPOS:
     - FirebaseAuth
     - FirebaseCore
     - FirebaseInstanceID
+    - FormTextField
     - GoogleToolboxForMac
     - GTMSessionFetcher
     - Koloda
@@ -64,7 +65,6 @@ SPEC REPOS:
     - pop
     - Stripe
     - SVProgressHUD
-    - WASHD
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -74,6 +74,7 @@ SPEC CHECKSUMS:
   FirebaseAuth: 096e457cdd4274412a66c4a35874787e411f5a03
   FirebaseCore: 42b3267233bd21a5abd54117ccc38ca3dd0f8e83
   FirebaseInstanceID: f3f0657372592ecdfdfe2cac604a5a75758376a6
+  FormTextField: 061cd39ee77d5fb3d87b2e5a00728e2c874b3904
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   Koloda: 0d39b2aa188ccd1fac48d752acaf9802e683c625
@@ -81,8 +82,7 @@ SPEC CHECKSUMS:
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   Stripe: 76c203e21555089b708e6cbe972a3e3baf1ab4d8
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  WASHD: 9d2da591edfbc1397745c5c670225efc1b240cbf
 
-PODFILE CHECKSUM: 4c1141e6f380eeec56d03c6ca8820f4cf07b402d
+PODFILE CHECKSUM: a3068b6ddf00b776baefea9d98e9bc8fb1f43bc0
 
 COCOAPODS: 1.5.2

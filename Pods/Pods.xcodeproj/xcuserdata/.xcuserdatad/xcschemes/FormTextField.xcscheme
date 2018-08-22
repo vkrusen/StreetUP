@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "30F0719C7DFABFE74EE743113DB23AF8"
-               BlueprintName = "WASHD"
+               BlueprintIdentifier = "5DFA2E6563CABF18B01CBC38A5BA4974"
+               BlueprintName = "FormTextField"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "WASHD.framework">
+               BuildableName = "FormTextField.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
