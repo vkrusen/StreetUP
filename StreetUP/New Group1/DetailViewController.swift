@@ -31,6 +31,8 @@ import AlamofireImage
 
 class DetailViewController: BaseViewController {
   
+    @IBOutlet var topView: UIView!
+    @IBOutlet var titleLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var priceLabel: UILabel!
     @IBOutlet var conditionLabel: UILabel!
@@ -69,7 +71,9 @@ class DetailViewController: BaseViewController {
     setupShadow(UIItem: BidButton, offsetX: -3, offsetY: 3, spread: 0, alpha: 1.0, HEXColor: "3FBD06")
     BidButton.layer.cornerRadius = 7
     
-    title = item.name
+    setupShadow(UIItem: topView, offsetX: 0, offsetY: 2, spread: 0, alpha: 0.04, HEXColor: "000000")
+    
+    titleLabel.text = item.name
     
     print(item)
     

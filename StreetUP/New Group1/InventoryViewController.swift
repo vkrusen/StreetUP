@@ -41,7 +41,7 @@ class InventoryViewController: BaseViewController {
   }
   
   private enum ViewControllerIdentifiers {
-    static let Detail = "DetailViewController"
+    static let Detail = "DetailViewControllerId"
   }
   
     @IBOutlet var collectionView: UICollectionView!
@@ -93,7 +93,13 @@ extension InventoryViewController: UICollectionViewDelegate {
             return
         }
         detailViewController.item = items[indexPath.row]
-        navigationController?.pushViewController(detailViewController, animated: true)
+        self.present(detailViewController, animated: true, completion: nil)
+        
+        /*
+         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+         let newViewController = storyBoard.instantiateViewController(withIdentifier: "ShippingViewControllerId") //as! ShippingViewController
+         self.present(newViewController, animated: true, completion: nil)
+        */
     }
   
 }
