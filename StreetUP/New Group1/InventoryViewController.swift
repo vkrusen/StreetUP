@@ -94,12 +94,6 @@ extension InventoryViewController: UICollectionViewDelegate {
         }
         detailViewController.item = items[indexPath.row]
         self.present(detailViewController, animated: true, completion: nil)
-        
-        /*
-         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-         let newViewController = storyBoard.instantiateViewController(withIdentifier: "ShippingViewControllerId") //as! ShippingViewController
-         self.present(newViewController, animated: true, completion: nil)
-        */
     }
   
 }

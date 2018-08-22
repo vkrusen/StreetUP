@@ -340,21 +340,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TH5-Lo-rV8">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TH5-Lo-rV8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lNr-7v-DqE">
-                                    <size key="itemSize" width="170" height="200"/>
+                                    <size key="itemSize" width="170" height="202"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="InventoryItemCellId" reuseIdentifier="InventoryItemCell" id="B8C-wf-z0q" customClass="InventoryItemCell" customModule="StreetUP" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="170" height="200"/>
+                                        <rect key="frame" x="10" y="10" width="170" height="202"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="170" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="202"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bGF-KJ-4DV">
@@ -592,6 +592,9 @@
                     <navigationItem key="navigationItem" id="YTd-Nr-McC">
                         <barButtonItem key="leftBarButtonItem" title="Töm" id="m3h-KM-RVJ">
                             <color key="tintColor" red="0.25490196079999999" green="0.74509803919999995" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="empty:" destination="s5A-0i-Uie" id="XQi-ap-0kd"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

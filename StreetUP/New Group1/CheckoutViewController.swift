@@ -67,7 +67,10 @@ class CheckoutViewController: BaseViewController {
     tableView.reloadData()
   }
   
-  @IBAction func continueDidTap(_ sender: Any) {
+    @IBAction func empty(_ sender: Any) {
+    }
+    
+    @IBAction func continueDidTap(_ sender: Any) {
     // 1
     guard CheckoutCart.shared.canPay else {
       let alertController = UIAlertController(title: "Warning", message: "Your cart is empty", preferredStyle: .alert)
@@ -172,7 +175,8 @@ extension CheckoutViewController: UITableViewDataSource {
     if isRemoved {
       tableView.beginUpdates()
       tableView.deleteRows(at: [indexPath], with: .automatic)
-      tableView.reloadSections(IndexSet(integer: 1), with: .automatic)
+      tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+      totalLabel.text = "0 kr"
       tableView.endUpdates()
     }
   }

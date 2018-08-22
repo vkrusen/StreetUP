@@ -1,43 +1,27 @@
  [
   
   {
-  "id" : 12252012,
-  "name" : "YEEZY 350 V2 Cream White",
-  "breed" : "Adidas",
-  "photo_large" : "https://sneakerbardetroit.com/wp-content/uploads/2018/05/adidas-Yeezy-350-V2-Cream-White-Restock.jpg",
-  "price" : 350000
-  },
-  
-  {
-  "id" : 12252013,
-  "name" : "YEEZY 350 V2 Oreo",
-  "breed" : "Adidas",
-  "photo_large" : "https://images.vinted.net/thumbs/f800/001c9_LC8VWhwGV5NyTE9Xob15cpqE.jpeg?11512650248",
-  "price" : 650000
-  },
-  
-  {
-  "id" : 12252014,
-  "name" : "YEEZY 350 V2 Butter",
-  "breed" : "Adidas",
-  "photo_large" : "https://cdn.thesolesupplier.co.uk/2018/04/skskkakaksdia.jpg",
-  "price" : 380000
-  },
-  
-  {
-  "id" : 12252014,
-  "name" : "YEEZY 350 V2 Zebra",
-  "breed" : "Adidas",
-  "photo_large" : "https://topwearltd.com/wp-content/uploads/2018/02/zebra-adidas-sply-350-yeezy-topwear.jpg",
-  "price" : 480000
-  },
-  
-  {
   "id" : 12252098,
   "name" : "Supreme Basic Tee White",
   "breed" : "Supreme",
   "photo_large" : "https://stockx.imgix.net/products/streetwear/Supreme-Brooklyn-Box-Logo-Tee-White.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2",
   "price" : 145000
+  },
+  
+  {
+  "id" : 12252098,
+  "name" : "Supreme Bogo Tee Blue",
+  "breed" : "Supreme",
+  "photo_large" : "https://stockx.imgix.net/products/streetwear/Supreme-New-York-Yankees-Box-Logo-Tee-White.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2",
+  "price" : 125000
+  },
+  
+  {
+  "id" : 12252098,
+  "name" : "Supreme Bogo Tee Red",
+  "breed" : "Supreme",
+  "photo_large" : "https://stockx.imgix.net/products/streetwear/Supreme-20th-Anniversary-Box-Logo-Tee-White.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2",
+  "price" : 90000
   }
   
 ]

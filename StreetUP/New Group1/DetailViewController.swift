@@ -119,6 +119,7 @@ class DetailViewController: BaseViewController {
     }
     
     @IBAction func dismiss(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
 }
