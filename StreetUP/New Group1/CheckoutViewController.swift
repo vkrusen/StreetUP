@@ -80,9 +80,9 @@ class CheckoutViewController: BaseViewController {
       return
     }
     // 2
-    let addCardViewController = STPAddCardViewController()
+    /*let addCardViewController = STPAddCardViewController()
         addCardViewController.delegate = self
-    navigationController?.pushViewController(addCardViewController, animated: true)
+    navigationController?.pushViewController(addCardViewController, animated: true)*/
     
     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
     let newViewController = storyBoard.instantiateViewController(withIdentifier: "ShippingViewControllerId") //as! ShippingViewController
