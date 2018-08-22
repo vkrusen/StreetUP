@@ -161,13 +161,19 @@ class CardViewController: BaseViewController, UITextFieldDelegate {
     
     // Stripe
     func stripe() {
+        let month = "\(MonthYearTextField.text!.prefix(2))"
+        let year = "20\(MonthYearTextField.text!.suffix(2))"
+        
         let cardParams = STPCardParams()
             cardParams.name = cardNameTextField.text
             cardParams.number = cardNumberTextField.text
-            cardParams.expMonth = 12 // Will be provided by textfield
-            cardParams.expYear = 2018 // Will be provided by textfield
+            cardParams.expMonth = UInt(month)!
+            cardParams.expYear = UInt(year)!
             cardParams.cvc = CVCTextField.text
+            cardParams.currency = "SEK"
+            //cardParams.address = STPAddress // Address should be provided here (STPAdress)
         
+        print(cardParams)
         
         
         STPAPIClient.shared().createToken(withCard: cardParams) { (token: STPToken?, error: Error?) in
@@ -182,7 +188,7 @@ class CardViewController: BaseViewController, UITextFieldDelegate {
                 switch result {
                 // 1
                 case .success:
-                    SVProgressHUD.showSuccess(withStatus: "Din betalning är bekräftad!")
+                    SVProgressHUD.dismiss()
                     
                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let newViewController = storyBoard.instantiateViewController(withIdentifier: "PurchaseSuccessfulViewControllerId") as! PurchaseSuccessfulViewController

@@ -73,7 +73,7 @@ class CheckoutViewController: BaseViewController {
     @IBAction func continueDidTap(_ sender: Any) {
     // 1
     guard CheckoutCart.shared.canPay else {
-      let alertController = UIAlertController(title: "Warning", message: "Your cart is empty", preferredStyle: .alert)
+      let alertController = UIAlertController(title: "Hoppsan", message: "Din korg är tom", preferredStyle: .alert)
       let alertAction = UIAlertAction(title: "OK", style: .default)
       alertController.addAction(alertAction)
       present(alertController, animated: true)

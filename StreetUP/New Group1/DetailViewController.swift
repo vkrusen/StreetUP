@@ -47,7 +47,6 @@ class DetailViewController: BaseViewController {
     @IBOutlet var sizeView: UIView!
     
     var item: Item!
-    var buttonStatus = 0
     
     private enum StoryboardNames {
         static let Main = "Main"
@@ -110,12 +109,15 @@ class DetailViewController: BaseViewController {
     }
   
     @IBAction func purchaseAction(_ sender: Any) {
-        CheckoutCart.shared.addItem(item)
-        /*let storyboard = UIStoryboard(name: StoryboardNames.Main, bundle: nil)
-        guard let CheckoutViewController = storyboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.Checkout) as? CheckoutViewController else {
-            return
+        if CheckoutCart.shared.cart.count > 0 {
+            let alertController = UIAlertController(title: "Hoppsan", message: "Du har redan en sak i din korg.", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(alertAction)
+            present(alertController, animated: true)
+        } else {
+            CheckoutCart.shared.addItem(item)
+            BINButton.setTitle("Tillagd", for: .normal)
         }
-        navigationController?.pushViewController(CheckoutViewController, animated: true)*/
     }
     
     @IBAction func dismiss(_ sender: Any) {
